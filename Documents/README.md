@@ -2,6 +2,8 @@
 
 Interconnect 2017 Session ID: 2378A
 
+git location: [https://github.com/kenatibm/Interconnect-2017](https://github.com/kenatibm/Interconnect-2017)
+
 ## Speakers
 | Ken Nelson | Chelsie Peterson | Paul Horan |
 | :---- | :---- | :---- |
@@ -45,9 +47,25 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 ### Steps
 1. Login to Bluemix. http://www.bluemix.net
 2. In the dev space, create the following services:
-	3. Cloudant Database; found in the **Services** | **Data & Analytics** Section
-	4. API Connect; found in the **Services** | **APIs** Section
+	3. Cloudant Database; located in the **Services** | **Data & Analytics** Section
+	4. API Connect; located in the **Services** | **APIs** Section
 4. In the dev space, create the following Apps
-	4. Mobile Foundation;  found in the **Apps** | **Mobile** Section
+	4. Mobile Foundation; located in the **Apps** | **Mobile** Section
+
+### Detailed Steps
+1. Login to Bluemix. 
+	- Open a browser and enter [http://www.bluemix.net](http://www.bluemix.net)
+	- Click the Log In button
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/7f26987641e907204940d8d3a3ff957ac582b4ba/Documents/images/bluemix-login.png?raw=true)
+	- Enter your Bluemix user name (Email address or IBMId) and Click the Continue button
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/7f26987641e907204940d8d3a3ff957ac582b4ba/Documents/images/bluemix-login-username.png?raw=true)
+	- Enter your Bluemix user password and Click the Log In button
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/7f26987641e907204940d8d3a3ff957ac582b4ba/Documents/images/bluemix-login-password.png?raw=true)
+	- If successful you should see a screen similar to the following.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/7f26987641e907204940d8d3a3ff957ac582b4ba/Documents/images/bluemix-home.png?raw=true)
 
 
