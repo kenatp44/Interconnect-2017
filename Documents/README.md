@@ -53,19 +53,80 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 	4. Mobile Foundation; located in the **Apps** | **Mobile** Section
 
 ### Detailed Steps
-1. Login to Bluemix. 
+1. **Login to Bluemix** 
 	- Open a browser and enter [http://www.bluemix.net](http://www.bluemix.net)
-	- Click the Log In button
+	- **Click** the **Log In** button
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/7f26987641e907204940d8d3a3ff957ac582b4ba/Documents/images/bluemix-login.png?raw=true)
-	- Enter your Bluemix user name (Email address or IBMId) and Click the Continue button
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-home.png?raw=true)
+	- Enter your Bluemix user name (Email address or IBMId) and **Click** the **Continue** button
 	
-		![](https://github.com/kenatibm/Interconnect-2017/blob/7f26987641e907204940d8d3a3ff957ac582b4ba/Documents/images/bluemix-login-username.png?raw=true)
-	- Enter your Bluemix user password and Click the Log In button
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-login-username.png?raw=true)
+	- Enter your Bluemix user password and **Click** the **Log In** button
 	
-		![](https://github.com/kenatibm/Interconnect-2017/blob/7f26987641e907204940d8d3a3ff957ac582b4ba/Documents/images/bluemix-login-password.png?raw=true)
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-login-password.png?raw=true)
 	- If successful you should see a screen similar to the following.
 	
-		![](https://github.com/kenatibm/Interconnect-2017/blob/7f26987641e907204940d8d3a3ff957ac582b4ba/Documents/images/bluemix-home.png?raw=true)
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-home.png?raw=true)
+		
+1. **Create a Cloudant Service**
+	- **Click** the **Catalog** link in the upper right section of the Bluemix Home page.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-click-catalog.png?raw=true)
+		
+	- **Click** the **Data & Analytics** link in the Services menu on the left hand side of the page
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-data-analytics-menu-link.png?raw=true)
+		
+	- **Click** the **Cloudant NoSQL DB** link from the results	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-link.png?raw=true)
+	- Change the **Service name** to Interconnect2017-cloudant
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-setup-service-name.png?raw=true)
+	- **Scroll** to the Pricing Plans and ensure that the **Lite** plan is selected, then **Click** the **Create** button
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-setup-pricing.png?raw=true)
+	- When the service is created you should see a screen similar to the following. You can click the LAUNCH button if you like. However you will be coming back to this in a future lab
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-setup-complete.png?raw=true)
+
+1. **Create API Connect Service**
+	- **Click** the **Catalog** link in the upper right section of the Bluemix Home page.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-click-catalog.png?raw=true)
+		
+	- **Click** the **APIs** link in the Services menu on the left hand side of the page
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-menu-link.png?raw=true)
+
+	- **Click** the **API Connect** link from the results
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-api-connect-link.png?raw=true)
+
+	- Change the **Service name** to Interconnect2017-apic
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-setup-service-name.png?raw=true)
+
+	- **Scroll** to the Pricing Plans and ensure that the **Essentials** plan is selected, then **Click** the **Create** button
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-setup-pricing.png?raw=true)
+
+	- When the service is created you sould see a screen similar to the following.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-setup-complete.png?raw=true)
+
+1. **Create Mobile Foundation App**
+	- **Click** the **Catalog** link in the upper right section of the Bluemix Home page.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-click-catalog.png?raw=true)	
+	- **Click** the **Mobile** link in the Apps menu on the left hand side of the page.
+	- **Click** the **Mobile Foundation** link from the results
+	- Change the **Service name** to Interconnect2017-mobile
+	- **Scroll** to the Pricing Plans and ensure that the **Developer** plan is selected, then **Click** the **Create** button
+	- When setting up the Mobile Foundation server instance you have full control over the settings such as size of the server, adminstrator password, as well as Server Configuration options. You will want to set the admin username and password. To do that, **Click** the **Settings** button.
+	- Leave the Topology Size as Small (S). **Click** the **Security** tab.
+	- On the **Security** tab you can set the admin password. Set the password by entering *admin* in the **Console Login Password** field and then confirm the password by typing *admin* again tin the **Confirm Password** field. You can also set LTPA Keys if you have them on the screen, however for this lab you will not do that. **Scroll** to the bottom of the page and **Click** the **Next** button.
+	- On the **Server Configuration** tab you can set up JNDI entries and configure the User Registry. You will not need this for this lab. **Scroll** to the bottom of the page and **Click** the **Start Advanced Server** button
+		
+
 
 
