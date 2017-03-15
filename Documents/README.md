@@ -151,7 +151,17 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-settings-server-configuration.png?raw=true)
 		
 	- This will start the server provisioning process. This can take up to 10 minutes.
-		
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-starting-server.png?raw=true)	
+	- When the server is provisioned, you will see the following screen.  Here you can 1) Launch the server console, 2) View the administrator password and 3) Add the analytics server (which will not be convered in this session).
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-complete.png?raw=true)
+
+1. **Conclusion**: Lab Complete
+
+	The lab is complete. To confirm your setup of the necessary services, **Click** the **Bluemix** icon in the upper left side of the page. This will display the services and apps that have been provisioned. Your configuration should look similar to the one below.
+
+	![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-setup-complete.png?raw=true)
 
 
 
