@@ -247,3 +247,41 @@ In this lab you will create a database in Cloudant that will be used to store em
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-refresh.png?raw=true)
 
 1. **Create an employee list view**
+
+	Views are **Design Documents** used for working with document content in databases. A view can selectively filter documents and speed up searching for content. Views can be used to ‘pre-process’ results before they are returned to the client.
+	
+	- To create a view, **Click** the **Plus Sign** for the **Design Documents** menu option to open the menu.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-menu.png?raw=true)
+
+	- **Click** the **New View** menu option.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view.png?raw=true)
+
+	- Set the View **Name** the view **employeeList** and name the index **idxEmployeeList**.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-name-view-employeeList.png?raw=true)
+
+	- Copy the snippit in `employeeList-view.json` under `Interconnect 2017/Snippets/Cloudant` directory then past over the existing map function or type the following:
+
+		```javascript
+		function(emp) {
+			if (emp.first_name && emp.last_name && emp.job_title && emp.email) {
+				emit(emp._rev, {
+					first_name: emp.first_name,
+					last_name: emp.last_name,
+					title: emp.job_title,
+					email: emp.email,
+					img: emp.img,
+					favorite: emp.favorite
+				});
+			}
+		}```
+		
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-name-view-employeeList-map.png?raw=true)
+
+	- **Click** the **Create Document and Build Index** button.
+		
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view-create.png?raw=true)
+
+		
