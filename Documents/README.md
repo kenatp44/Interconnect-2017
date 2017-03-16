@@ -163,5 +163,87 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 
 	![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-setup-complete.png?raw=true)
 
+## Lab 2 - Create Employee Database using Cloudant
 
+In this lab you will create a database in Cloudant that will be used to store employee records in NoSQL format. Cloudant's service provides integrated data management, search, and analytics engine designed for web & mobile applications. Cloudant scales databases on the CouchDB framework and provides hosting, administrative tools, analytics and commercial support for CouchDB and BigCouch. For more information on Cloudant, please visit [https://cloudant.com/](https://cloudant.com/)
 
+### Steps
+1. Login to Cloudant using the Bluemix Console
+1. Create the Employee Database (employees)
+1. Use terminal to load Employee Database with records
+1. Confirm employee records exist
+1. Create an employee list view
+1. Create an employee favorites view
+1. Generate an application key for external access
+
+### Detailed Steps
+
+1. **Login to Cloudant using the Bluemix Console**
+	- From the Bluemix **Dashboard**, found by clicking the hamburger icon in the upper left corner of the screen and selecting **Dashboard**, locate the Interconnect2017-cloudant service and **Click** it. 
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-dashboard-cloudant-service.png?raw=true)		
+1. **Create the Employee Database (employees)**
+
+	- With the Cloudant service open, **Click** the **Manage** tab and then **Click** the **LAUNCH** button to open the Cloudant management console in a new tab in the browser.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service.png?raw=true)
+		
+	- Once the Cloudant management console opens, **Click** the **Database** menu option to show the list of databases.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-menu.png?raw=true)
+		
+	- To create a new database, **Click** the **Create Database** button on the Databases page.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-create-database-button.png?raw=true)
+
+	- Enter **employees** for the database name and **Click** the **Create** button.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-create.png?raw=true)
+
+	- The database was successfully created if you see a message that says **Database created successfully**
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-create-success.png?raw=true)
+
+1. **Use terminal to load Employee Database with records**
+
+		Bluemix stores a copy of the service credentials for the Cloudant service that you have created. To populate the database you will need the service credentials, specifically the URL that embeds the username and password as part of the URL.
+
+	- With the Cloudant service open in the first browser window/tab, **Click** the **Service Credentials** tab
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service-credentials-menu.png?raw=true)
+	
+	- **Click** the **View Credentials** drop-down
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service-credentials-view.png?raw=true)
+	
+	- **Copy** the **URL** to the clipboard. The URL will contain the username and password as well as the url. Include the `https://` all the way to the end of the `cloudant.com`.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service-credentials-url.png?raw=true)
+
+	- Open a terminal window.
+	
+	- When the window opens navigate to the `Interconnect 2017/Snippets/Cloudant` directory
+	
+	- Set the DB variable to the URL you just copied from your Service Credentials. Type the following:
+	
+		`DB=[PASTE THE CONTENTS OF THE CLIPBOARD]` 
+	
+		it should like something like
+	
+		`DB=https://XXXXXXXX-XXXX-XXX-XXXX-XXXXXXXXXXXX-bluemix:`
+	`XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX@`
+	`XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX-bluemix.cloudant.com`
+	
+	- Once the DB parameter is set, you will use curl to load the database using the employeeData.json file in the `Interconnect 2017/Snippets/Cloudant` directory. Type the following to load the database:
+	
+		`curl -H "Content-Type:application/json" -d @employeeData.json -X POST "$DB/employees/_bulk_docs"`
+
+		> **Note:** you can copy/paste the commands that are in a file `terminal commands.txt` under `Interconnect 2017/Snippets/Cloudant` directory.
+		
+1. **Confirm employee records exist**
+
+	- Return to the browser tab that has the Cloudant management console open. Refresh the browser to show the list of employee records. Your screen should like like the following:
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-refresh.png?raw=true)
+
+1. **Create an employee list view**
