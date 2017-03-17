@@ -51,6 +51,7 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 2. In the dev space, create the following services:
 	3. Cloudant Database; located in the **Services** | **Data & Analytics** Section
 	4. API Connect; located in the **Services** | **APIs** Section
+	5. Create Developer Portal for API Connect
 4. In the dev space, create the following Apps
 	4. Mobile Foundation; located in the **Apps** | **Mobile** Section
 
@@ -137,10 +138,72 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-setup-complete.png?raw=true)
 <div style="page-break-after: always;"></div>
 
+1. **Create Developer Portal for API Connect**
+
+	Once you have provisioned API Connect on Bluemix you will need to instantiate a developer portal. You will use the Developer Portal to consume register your mobile application in a later lab.
+	
+	- With the API Connect Draft Page still open, **Click** the menu icon
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/blbluemix-apis-dp-menu.png?raw=true)
+		<div style="page-break-after: always;"></div>
+
+	- **Select** the **Dashboard** menu item
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-menu-dashboard.png?raw=true)
+		<div style="page-break-after: always;"></div>
+
+	- You will notice that you have a **Sandbox** catalog already defined but you will want to create a catalog for your application. To do that, **Click** the **Add** button.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-add-button.png?raw=true)
+		<div style="page-break-after: always;"></div>
+
+	- Then **Click** the **Catalog** menu option
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-add-catalog-button.png?raw=true)
+		<div style="page-break-after: always;"></div>
+
+	- When the **Add Catalog** dialog opens, enter **EmployeeCatalog** for the **Display Name**. This will automatically generate the Catalog Name in lowercase. Then **Click** the **Add** button.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-add-catalog-dialog.png?raw=true)
+		<div style="page-break-after: always;"></div>
+
+	- **Click** the **EmployeeCatalog** to display the catalog properties
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-employee-catalog.png?raw=true)
+		<div style="page-break-after: always;"></div>
+
+	- **Click** the **Settings** tab
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-employee-catalog-settings.png?raw=true)
+		<div style="page-break-after: always;"></div>
+
+	- **Click** the **Portal** settings option
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-employee-catalog-settings-portal.png?raw=true)
+		<div style="page-break-after: always;"></div>
+
+	- **Select** the **IBM Developer Portal** option for the Portal Configuration. Note the Portal URL. You may want to open the URL in a new tab for later, however the URL will not be ready until after you have saved the configuration and the developer portal has been generated and activated.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-employee-catalog-settings-portal-IBM-portal.png?raw=true)
+		<div style="page-break-after: always;"></div>
+
+	- **Click** the **Save** button.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-employee-catalog-settings-save.png?raw=true)
+		<div style="page-break-after: always;"></div>
+
+	- After saving you should see a dialog letting you know that the developer portal is being created.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-employee-catalog-creating-developer-portal.png?raw=true)
+		<div style="page-break-after: always;"></div>
+
+	- You will recieve an email with a link for activation and to change the admin password. Click the link to activate the portal
+
 1. **Create Mobile Foundation App**
 	- **Click** the **Catalog** link in the upper right section of the Bluemix Home page.
 	
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-click-catalog.png?raw=true)<div style="page-break-after: always;"></div>
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-click-catalog.png?raw=true)
+		<div style="page-break-after: always;"></div>
 			
 	- **Click** the **Mobile** link in the Apps menu on the left hand side of the page.
 		
@@ -378,3 +441,28 @@ In this lab you will create a database in Cloudant that will be used to store em
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view-complete-o.png?raw=true)
 <div style="page-break-after: always;"></div>
 
+1. **Generate an application key for external access**
+
+	An application will be used in lieu of a username and password to allow the API that you will write in a later lab to access the resources you just created.
+	
+	- **Click** the **Permissions** menu option
+				
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-permissions-menu.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Generate API Key** button
+				
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-permissions-generate-api-key.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Copy** the generated **Key** and **Password**
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-permissions-key-password.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Check** the **_writer** permission for the generated key
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-permissions-writer.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+## Lab 3 - API Connect
