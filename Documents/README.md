@@ -39,6 +39,8 @@ There are four labs that you will complete, they are:
 
 3. **IBM Mobile Foundation** (aka MobileFirst Foundation): In this lab, you will develop both the server-side and the client-side of an Ionic 2/Angular 2 hybrid mobile application, deployed to both iOS and Android devices using Apache Cordova. You will also develop a Javascript Adapter that connects to the API exposed from API Connect, and then consume that adapter from the Ionic/Angular application code.
 
+<div style="page-break-after: always;"></div>
+
 ## Lab 1 - Instantiate Bluemix Environment
 In this lab you will be given a Bluemix ID to use. This ID will be destroyed after the conference. 
 
@@ -57,111 +59,136 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 	- Open a browser and enter [http://www.bluemix.net](http://www.bluemix.net)
 	- **Click** the **Log In** button
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-home.png?raw=true)
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-login.png?raw=true)
+		<div style="page-break-after: always;"></div>
+		
 	- Enter your Bluemix user name (Email address or IBMId) and **Click** the **Continue** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-login-username.png?raw=true)
+		<div style="page-break-after: always;"></div>
+		
 	- Enter your Bluemix user password and **Click** the **Log In** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-login-password.png?raw=true)
+		<div style="page-break-after: always;"></div>
+		
 	- If successful you should see a screen similar to the following.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-home.png?raw=true)
+		<div style="page-break-after: always;"></div>
 		
 1. **Create a Cloudant Service**
 	- **Click** the **Catalog** link in the upper right section of the Bluemix Home page.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-click-catalog.png?raw=true)
+		<div style="page-break-after: always;"></div>
 		
 	- **Click** the **Data & Analytics** link in the Services menu on the left hand side of the page
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-data-analytics-menu-link.png?raw=true)
+		<div style="page-break-after: always;"></div>
 		
 	- **Click** the **Cloudant NoSQL DB** link from the results	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-link.png?raw=true)
+		<div style="page-break-after: always;"></div>
+		
 	- Change the **Service name** to Interconnect2017-cloudant
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-setup-service-name.png?raw=true)
+		<div style="page-break-after: always;"></div>
+		
 	- **Scroll** to the Pricing Plans and ensure that the **Lite** plan is selected, then **Click** the **Create** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-setup-pricing.png?raw=true)
+		<div style="page-break-after: always;"></div>
+		
 	- When the service is created you should see a screen similar to the following. You can click the LAUNCH button if you like. However you will be coming back to this in a future lab
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-setup-complete.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 1. **Create API Connect Service**
 	- **Click** the **Catalog** link in the upper right section of the Bluemix Home page.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-click-catalog.png?raw=true)
-		
+<div style="page-break-after: always;"></div>		
 	- **Click** the **APIs** link in the Services menu on the left hand side of the page
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-menu-link.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	- **Click** the **API Connect** link from the results
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-api-connect-link.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	- Change the **Service name** to Interconnect2017-apic
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-setup-service-name.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	- **Scroll** to the Pricing Plans and ensure that the **Essentials** plan is selected, then **Click** the **Create** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-setup-pricing.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	- When the service is created you sould see a screen similar to the following.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-setup-complete.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 1. **Create Mobile Foundation App**
 	- **Click** the **Catalog** link in the upper right section of the Bluemix Home page.
 	
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-click-catalog.png?raw=true)	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-click-catalog.png?raw=true)<div style="page-break-after: always;"></div>
+			
 	- **Click** the **Mobile** link in the Apps menu on the left hand side of the page.
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-menu-link.png?raw=true)
-		
+<div style="page-break-after: always;"></div>		
 	- **Click** the **Mobile Foundation** link from the results
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-foundation-link.png?raw=true)
-		
+<div style="page-break-after: always;"></div>		
 	- Change the **Service name** to Interconnect2017-mobile
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-service-name.png?raw=true)
-		
+<div style="page-break-after: always;"></div>		
 	- **Scroll** to the Pricing Plans and ensure that the **Developer** plan is selected, then **Click** the **Create** button
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-pricing.png?raw=true)
-		
+<div style="page-break-after: always;"></div>		
 	- When setting up the Mobile Foundation server instance you have full control over the settings such as size of the server, adminstrator password, as well as Server Configuration options. You will want to set the admin username and password. To do that, **Click** the **Settings** button.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-settings-link.png?raw=true)
-		
+<div style="page-break-after: always;"></div>		
 	- Leave the Topology Size as Small (S). **Click** the **Security** tab.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-settings-topology.png?raw=true)
-		
+<div style="page-break-after: always;"></div>		
 	- On the **Security** tab you can set the admin password. Set the password by entering *admin* in the **Console Login Password** field and then confirm the password by typing *admin* again tin the **Confirm Password** field. You can also set LTPA Keys if you have them on the screen, however for this lab you will not do that. **Scroll** to the bottom of the page and **Click** the **Next** button.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-settings-security.png?raw=true)
-		
+<div style="page-break-after: always;"></div>		
 	- On the **Server Configuration** tab you can set up JNDI entries and configure the User Registry. You will not need this for this lab. **Scroll** to the bottom of the page and **Click** the **Start Advanced Server** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-settings-server-configuration.png?raw=true)
-		
+<div style="page-break-after: always;"></div>		
 	- This will start the server provisioning process. This can take up to 10 minutes.
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-starting-server.png?raw=true)	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-starting-server.png?raw=true)
+<div style="page-break-after: always;"></div>	
 	- When the server is provisioned, you will see the following screen.  Here you can 1) Launch the server console, 2) View the administrator password and 3) Add the analytics server (which will not be convered in this session).
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-complete.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 1. **Conclusion**: Lab Complete
 
 	The lab is complete. To confirm your setup of the necessary services, **Click** the **Bluemix** icon in the upper left side of the page. This will display the services and apps that have been provisioned. Your configuration should look similar to the one below.
 
 	![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-setup-complete.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 ## Lab 2 - Create Employee Database using Cloudant
 
@@ -173,7 +200,7 @@ In this lab you will create a database in Cloudant that will be used to store em
 1. Use terminal to load Employee Database with records
 1. Confirm employee records exist
 1. Create an employee list view
-1. Create an employee favorites view
+1. (Optional) Create an employee favorites view
 1. Generate an application key for external access
 
 ### Detailed Steps
@@ -181,28 +208,33 @@ In this lab you will create a database in Cloudant that will be used to store em
 1. **Login to Cloudant using the Bluemix Console**
 	- From the Bluemix **Dashboard**, found by clicking the hamburger icon in the upper left corner of the screen and selecting **Dashboard**, locate the Interconnect2017-cloudant service and **Click** it. 
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-dashboard-cloudant-service.png?raw=true)		
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-dashboard-cloudant-service.png?raw=true)
+		<div style="page-break-after: always;"></div>
+				
 1. **Create the Employee Database (employees)**
 
 	- With the Cloudant service open, **Click** the **Manage** tab and then **Click** the **LAUNCH** button to open the Cloudant management console in a new tab in the browser.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service.png?raw=true)
-		
+<div style="page-break-after: always;"></div>		
 	- Once the Cloudant management console opens, **Click** the **Database** menu option to show the list of databases.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-menu.png?raw=true)
-		
+<div style="page-break-after: always;"></div>		
 	- To create a new database, **Click** the **Create Database** button on the Databases page.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-create-database-button.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	- Enter **employees** for the database name and **Click** the **Create** button.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-create.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	- The database was successfully created if you see a message that says **Database created successfully**
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-create-success.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 1. **Use terminal to load Employee Database with records**
 
@@ -211,14 +243,17 @@ In this lab you will create a database in Cloudant that will be used to store em
 	- With the Cloudant service open in the first browser window/tab, **Click** the **Service Credentials** tab
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service-credentials-menu.png?raw=true)
+<div style="page-break-after: always;"></div>
 	
 	- **Click** the **View Credentials** drop-down
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service-credentials-view.png?raw=true)
+<div style="page-break-after: always;"></div>
 	
 	- **Copy** the **URL** to the clipboard. The URL will contain the username and password as well as the url. Include the `https://` all the way to the end of the `cloudant.com`.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service-credentials-url.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	- Open a terminal window.
 	
@@ -239,12 +274,14 @@ In this lab you will create a database in Cloudant that will be used to store em
 		`curl -H "Content-Type:application/json" -d @employeeData.json -X POST "$DB/employees/_bulk_docs"`
 
 		> **Note:** you can copy/paste the commands that are in a file `terminal commands.txt` under `Interconnect 2017/Snippets/Cloudant` directory.
+<div style="page-break-after: always;"></div>
 		
 1. **Confirm employee records exist**
 
 	- Return to the browser tab that has the Cloudant management console open. Refresh the browser to show the list of employee records. Your screen should like like the following:
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-refresh.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 1. **Create an employee list view**
 
@@ -253,35 +290,91 @@ In this lab you will create a database in Cloudant that will be used to store em
 	- To create a view, **Click** the **Plus Sign** for the **Design Documents** menu option to open the menu.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-menu.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	- **Click** the **New View** menu option.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	- Set the View **Name** the view **employeeList** and name the index **idxEmployeeList**.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-name-view-employeeList.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	- Copy the snippit in `employeeList-view.json` under `Interconnect 2017/Snippets/Cloudant` directory then past over the existing map function or type the following:
 
-		```javascript
-		function(emp) {
-			if (emp.first_name && emp.last_name && emp.job_title && emp.email) {
-				emit(emp._rev, {
-					first_name: emp.first_name,
-					last_name: emp.last_name,
-					title: emp.job_title,
-					email: emp.email,
-					img: emp.img,
-					favorite: emp.favorite
-				});
+			function(emp) {
+				if (emp.first_name && emp.last_name && emp.job_title && emp.email) {
+					emit(emp._rev, {
+						first_name: emp.first_name,
+						last_name: emp.last_name,
+						title: emp.job_title,
+						email: emp.email,
+						img: emp.img,
+						favorite: emp.favorite
+					});
+				}
 			}
-		}```
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-name-view-employeeList-map.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	- **Click** the **Create Document and Build Index** button.
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view-create.png?raw=true)
+<div style="page-break-after: always;"></div>
 
+	- The page should look similar to the page below after the view has been successfully created.
+			
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view-complete.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+1. **(Optional) Create an employee favorites view**
+
+	This is an optional section of the lab. Feel free to skip it if you are running out of time. For this section you will repeat the process of creating a view, but this time you will create a view that only returns employees that the user has flagged as a Favorite.
+	
+	- To create a view, **Click** the **Plus Sign** for the **Design Documents** menu option to open the menu.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-menu-o.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **New View** menu option.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view-o.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- Set the View **Name** the view **employeeFavorites** and name the index **idxEmployeeFavorites**.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-name-view-employeeFavorites.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- Copy the snippit in `employeeList-view.json` under `Interconnect 2017/Snippets/Cloudant` directory then past over the existing map function or type the following:
+
+			function(emp) {
+				if (emp.first_name && emp.last_name && emp.job_title && emp.email) {
+					emit(emp._rev, {
+						first_name: emp.first_name,
+						last_name: emp.last_name,
+						title: emp.job_title,
+						email: emp.email,
+						img: emp.img,
+						favorite: emp.favorite
+					});
+				}
+			}
 		
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-name-view-employeeFavorites-map.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Create Document and Build Index** button.
+		
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view-create-o.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+
+	- The page should look similar to the page below after the view has been successfully created.
+			
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view-complete-o.png?raw=true)
+<div style="page-break-after: always;"></div>
+
