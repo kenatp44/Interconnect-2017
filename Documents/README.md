@@ -466,3 +466,121 @@ In this lab you will create a database in Cloudant that will be used to store em
 <div style="page-break-after: always;"></div>
 
 ## Lab 3 - API Connect
+
+Now that you you have created a datasource with data with a generated API Key, you will use API Connect on Bluemix to create an API Product and deploy it to the Developer Portal.
+
+### Steps
+
+1. Create a new API
+1. Configure the API
+1. Deploy the API
+
+### Detailed Steps
+
+1. **Create a new API**
+	- Start at the API Connect Dashboard then **Click** the API Connect Menu
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-menu.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Select** the **Drafts** menu option
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-menu-drafts.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **APIs** tab
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-drafts-api-menu.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Add** button
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-add-api-button.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Select** the **New API** menu option
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-add-api-new-api.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- When the **New API** dialog opens, **set** the **Title** to **EmployeeDirectory** and **set** the **Base Path** to **/** (slash), then open the **Additional properties**.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-add-new-api-dialog-set-title.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Set** the **Security** field to **Client ID and secret** 
+		- and **set** the **Gateway** to **Datapower** 
+		- and finally **Click** the **Create API** button
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-add-new-api-dialog-set-gateway.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+1. **Configure the API**
+	Now that you have created the API with some basic configuration, it is time to complete the configuration by adding the API path definitions and creating the assembly. There will be a total of three paths that you will create. The steps for the 
+	
+	- **Click** the **Paths** menu option
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Add Path** button (⊕)
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-add.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Set** the **Path** field to **/employees** 
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-set-title.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **GET** button
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Set** the **Operation ID** to **employee.findAll** and set the **Description** to **Retieves a list of all Employees**
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-parameters.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Add Operation** link
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-add-operation.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Select** the **PUT** operation
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-add-operation-put.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Scroll** to the **PUT** operation you just added and expand it by **clicking** the **PUT** button
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-put.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Set** the **Opertation ID** to **employee.upsert** and set the **Description** to **Updates or adds an employee record**
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-put-parameters.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Add Parameter** link for the **PUT** operation and then **Select** the **Add new parameter** option
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-put-add-parameters.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Set** the **Name** field to **data** and **change** the **Located in** to **Body** also **check** the **Required** checkbox
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-put-parameter-options.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Save** button
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-save.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+1. **Deploy the API**
+
+
+
+
+
