@@ -578,6 +578,26 @@ Now that you you have created a datasource with data with a generated API Key, y
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-save.png?raw=true)
 <div style="page-break-after: always;"></div>
 
+	- **Repeat for two more paths**
+
+		Now that you have created a path, you will repeat the steps for two more paths.
+		
+		|  Path  |  Operation ID  |  GET Parameter  |
+		|  :---  |  :---  |  :---  |
+		|  /employees/favorites  | employee.getFavorites | n/a |
+		|  /employees/{id}  | employee.findByID | id  (located in Path)|
+		
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-favorites.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-employee-by-id.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-employee-by-id-parameter.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+
 1. **Deploy the API**
 
 
