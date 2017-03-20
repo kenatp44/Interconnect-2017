@@ -1,0 +1,36 @@
+** Install Java
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update; sudo apt install oracle-java8-installer
+sudo apt install oracle-java8-set-default
+
+** Install nodejs
+
+sudo apt-get install python-software-properties
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install nodejs
+
+
+** Install git
+
+sudo apt-get install git
+
+
+** Install Maven
+
+sudo apt-get install maven
+
+
+** Install Ionic, Gulp, Cordova
+
+sudo npm install -g ionic gulp cordova
+
+
+** Install API Connect Command Line Interface
+
+npm install -g apiconnect
+
+** Install Mobile Foundation Command Line Interface
+
+npm install -g mfpdev-cli
+

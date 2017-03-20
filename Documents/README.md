@@ -19,14 +19,18 @@ Learn how to use [IBM's API Connect](http://www-03.ibm.com/software/products/en/
 All the tools necessary are installed on the virtual machine for this sesssion. However if you would like to setup a similar environment on your machine, you will need the following:
 
 ### Open-Source Tools
-- *NodeJS* available from [http://nodejs.org](http://nodejs.org). This will also install the node package manager (npm) used to install Ionic, Mobile Foundation Command Line Interface and API Connect Command Line Interface.- *Ionic 2 / Angular 2*: install with `npm install -g ionic`- Apple *Xcode* and the iOS SDK - available for MacOS only. Not installed on the Virtual Machine for this lab.- *Android Studio* and the Android SDK tools: https://developer.android.com/studio/index.html- Any code editing tool of your choice, such as: 
+- **NodeJS**: available from [http://nodejs.org](http://nodejs.org). This will also install the node package manager (npm) used to install Ionic, Mobile Foundation Command Line Interface and API Connect Command Line Interface. Use version 6.x or higher, although 6.x is recommended.- **Ionic 2 / Angular 2**: install with `sudo npm install -g ionic`- Apple **Xcode**: and the iOS SDK - available for MacOS only. Not installed on the Virtual Machine for this lab. Not used in this lab.- **Android Studio**: and the Android SDK tools: https://developer.android.com/studio/index.html. Not used in this lab.- Any code editing tool of your choice, such as: 
 	- Visual Studio Code [https://code.visualstudio.com/](https://code.visualstudio.com/)
 	- Brackets [http://brackets.io/](https://atom.io/)
 	- Atom [https://atom.io/](https://atom.io/)
 	- Webstorm (Commercial) [https://www.jetbrains.com/webstorm/](https://www.jetbrains.com/webstorm/)
+- **Git**: available from [https://git-scm.com/](https://git-scm.com/)
+- **Cordova**: available from [http://cordova.apache.org/](http://cordova.apache.org/) `sudo npm install -g cordova`
+- **Gulp**: available from [http://gulpjs.com/](http://gulpjs.com/) `sudo npm install -g gulp`
+- **Maven**: available from [https://maven.apache.org/](https://maven.apache.org/) `sudo apt-get install maven`
 
 ### IBM Tools
-- These labs require a **Bluemix Public account**, available at https://www.bluemix.net- **API Connect CLI**: install with `npm install -g apiconnect`- **Mobile Foundation Command Line Interface**: install with `npm install -g mfpdev-cli`
+- These labs require a **Bluemix Public account**, available at https://www.bluemix.net- **API Connect CLI**: install with `npm install -g apiconnect`. Note used in this lab.- **Mobile Foundation Command Line Interface**: install with `npm install -g mfpdev-cli`
 - Optionally you can install the **Mobile Foundation Developer Kit** which includes a version of the server that you can run locally. To install the Mobile Foundation Developer Kit visit [https://mobilefirstplatform.ibmcloud.com/downloads/](https://mobilefirstplatform.ibmcloud.com/downloads/)	
 
 ## Lab Sections
@@ -37,7 +41,7 @@ There are four labs that you will complete, they are:
 1. **Cloudant NoSQL data services**: You will instantiate a Cloudant database service in Bluemix, and use the commandline tool to load basic employee data. You will create several Cloudant views, and explore how to test those using the Cloudant admin console.
 2. **API Connect**: API Connect is IBM's platform for the creation, execution, management, and security of scalable microservices and APIs. In this section, you will connect to the Cloudant database instance created in lab #1, and we'll create a fully managed REST-based API that exposes both GET and PUT endpoints from the Cloudant REST API.
 
-3. **IBM Mobile Foundation** (aka MobileFirst Foundation): In this lab, you will develop both the server-side and the client-side of an Ionic 2/Angular 2 hybrid mobile application, deployed to both iOS and Android devices using Apache Cordova. You will also develop a Javascript Adapter that connects to the API exposed from API Connect, and then consume that adapter from the Ionic/Angular application code.
+3. **Mobile Foundation** (aka MobileFirst Foundation): In this lab, you will develop both the server-side and the client-side of an Ionic 2/Angular 2 hybrid mobile application, deployed to both iOS and Android devices using Apache Cordova. You will also develop a Javascript Adapter that connects to the API exposed from API Connect, and then consume that adapter from the Ionic/Angular application code.
 
 <div style="page-break-after: always;"></div>
 
@@ -473,7 +477,9 @@ Now that you you have created a datasource with data with a generated API Key, y
 
 1. Create a new API
 1. Configure the API
+1. Build the API Assembly
 1. Deploy the API
+1. Register Your App
 
 ### Detailed Steps
 
@@ -582,25 +588,531 @@ Now that you you have created a datasource with data with a generated API Key, y
 
 		Now that you have created a path, you will repeat the steps for two more paths.
 		
-		|  Path  |  Operation ID  |  GET Parameter  |
-		|  :---  |  :---  |  :---  |
-		|  /employees/favorites  | employee.getFavorites | n/a |
-		|  /employees/{id}  | employee.findByID | id  (located in Path)|
+		|  Path  |  Operation ID  |  GET Parameter  |  Type |
+		|  :---  |  :---  |  :---  |  :---  |
+		|  /employees/favorites  | employee.getFavorites | n/a | n/a |
+		|  /employees/{id}  | employee.findByID | id  (located in Path)|  string  |
 		
-
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-favorites.png?raw=true)
+		- **Path 2** - /employees/favorites
+	
+			![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-favorites.png?raw=true)
 <div style="page-break-after: always;"></div>
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-employee-by-id.png?raw=true)
+		- **Path 3** - /employees/{id}
+
+			![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-employee-by-id.png?raw=true)
+
+			![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-employee-by-id-parameter.png?raw=true)
 <div style="page-break-after: always;"></div>
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-employee-by-id-parameter.png?raw=true)
+	- **Click** the **Save** button
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-save-2.png?raw=true)
 <div style="page-break-after: always;"></div>
 
+1. **Build the API Assembly**
+
+	Next you will use the Assembly tool to build the execution of the REST services from Cloudant.
+	
+	- **Click** the **Assembly** tab
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-tab.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Drag & Drop** a **Operation Switch** operation onto the assembly workspace right before the invoke operation.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-operation-switch.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- Next, **Drag & Drop** the existing **invoke** operation so that it is part of the **Operation Switch** operation.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-move-invoke.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Drag & Drop** three more **invoke** operations under the **Operation Switch** operation.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-add-three-invoke-operations.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Operation Switch** on the assembly workspace.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-click-operation-switch.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- For each of the four switch operations, map to one of the four paths created earlier
+	
+		|  Case  |  Path  |
+		|  :---  |  :---  |
+		|  case 0  |  employee.findById |
+		|  case 1  |  employee.getFavorites |
+		|  case 2  |  employee.findAll |
+		|  Case 3  |  employee.upsert |
+	
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-map-operation-case.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	
+	- When mapped, your switch should look similar to the following
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-map-operation-case-complete.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- Configure the four **invoke** operations that are under the **Operation Switch** operation. This will require you to use the Cloudant REST services. You may want to launch your instance of Cloudant, if it is not already open.  Don't forgot to use your Cloudant URLs. The Username is the Key you generated earlier and the Password is the the Password that was generated.
+
+		|  Title  |  URL  |  Username  |  Password  |
+		|  :---  |  :---  |  :---------  |  :---------  |
+		|  findByID  |  https://**[REPLACE]**-bluemix.cloudant.com/employees/$(request.parameters.id)  |  [Your Cloudant Key]  |  [Your Cloudant Key Password]  |
+		|  getFavorites  |  https://**[REPLACE]**-bluemix.cloudant.com/employees/_design/employeeFavorites/_view/idxEmployeeFavorites?limit=20&reduce=false  |  [Your Cloudant Key]  |  [Your Cloudant Key Password]  |
+		|  findAll  |  https://**[REPLACE]**-bluemix.cloudant.com/employees/_design/employeeList/_view/idxEmployeeList?limit=20&reduce=false  |  [Your Cloudant Key]  |  [Your Cloudant Key Password]  |
+		|  upsert  |  https://**[REPLACE]**-bluemix.cloudant.com/employees/$(request.body._id)  |  [Your Cloudant Key]  |  [Your Cloudant Key Password]  |
+
+	- **Click** the **Save** button to save your assembly
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-save.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 1. **Deploy the API**
 
+	- **Click** the **All APIs** link
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-all-apis-link?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Products** link
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-products-link.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **+ Add** button then **Select** the **New Product** menu option
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-add-new-product-link.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- When the **New Product** dialog opens, **Set** the **Title** to EmployeeAPIs and **Click** the **Create Product** button
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-new-product-dialog.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- This will create a new product with default settings.  **Click** the **APIs** menu option on the left hand side of the page.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-add-api.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **(+)** Add button
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-add-api-button.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- When the **Select APIs** dialog opens, **Check** the **EmployeeDirectory** API and **Click** the **Apply** button.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-add-api-dialog.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Save** button to save your changes.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-save.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Publish** button. Looks like a cloud with an up arrow.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-button.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Select** the **EmployeeCatalog** as the target	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-employee-catalog.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the API Connect menu
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-apic-menu.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Select** the **Dashboard**
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-apic-menu-dashboard.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **EmployeeCatalog** to open
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-open-employee-catalog.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **EmployeeAPIs** menu option (three dots)
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-employeeapi-menu.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Select** the **Publish** option
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-employeeapi-menu-publish.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- When the **Edit visibility** dialog opens, **Click** the **Publish** button
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-employeeapi-dialog.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- Congratulations, your API is now published to the Developer Portal!
+
+1. **Register Your App**
+
+	Typically a consumer of the API that you just created will use the developer portal to register the application that they plan on developing or have already developed.  Once the developer has registered their application and subscribed to the API, they can begin to use the API.
+
+	- The first step in registering your app is to create a user account. Open your Developer Portal. If you forgot the URL of the Developer Portal you can always go back to the EmployeeCatalog Settings, there you will find the link for your Developer Portal.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-register-app-portal-url.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- To create your user account, **Click** the **Create an account** link on the top right side of the page.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-create-account.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- Complete the **Create new account** form by entering your Username, Developer Organization, and Captcha then **Click** the **Create new account** button
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-create-account-screen.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- Next, **Login** to the Developer Portal
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-login.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- Once logged in, the first step is to register an application. To do that **Click** the **Apps** tab at the top of the page
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-apps-tab.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Create new App** button
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-apps-create-app-button.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- With the **Register Application** page open, enter a title of **Employee Directory** and **Click** the **Submit** button
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-create-new-app-page.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- Once the app has been register **Check** the **Show Client Secret** checkbox. When the Client Secret is revealed, copy and paste it to a safe location. Once you leave this screen you will not have a chance to retrieve it again. You can also **Check** the **Client ID** checkbox to reveal the Client ID, unlike the Client Secret you can retrieve this later. 
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-app-settings-page.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- Now that there is a registered application, you will need to subscribe to an API Product. To view what API Products are avaialble **Click** the **API Products** tab at the top of the page.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-api-products.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **EmployeeAPIs**
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-employee-api.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Subscribe** button
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-api-subscribe-button.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- When the **Subscribe** dialog opens, check the **Employee Directory** application and **Click** the **Subscribe** button
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-api-subscribe-dialog.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- You can test your APIs **Clicking** the **EmployeeDirectory** menu item on the left side of the page.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-test-api.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **GET /employees** service on the left side of the page.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-test-api-get-employee.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Click** the **Call Operation** button for the GET /employees service.
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-test-api-call-operation.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Scroll** the right side of the page to see the results
+	
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-test-api-response.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 
+## Lab 4 - Mobile Foundation
 
+### Steps
+1. Housekeeping for Interconnect Lab only
+2. Download and configure stand-alone app
+2. Test the stand-alone app
+3. Create Employee Adapter
+4. Build & Deploy the Employee Adapter
+5. Test the Employee Adapter
+4. Add Mobile Foundation Cordova Plugin
+5. Update source code to be Mobile Foundation aware
+6. Create an Ionic Service Provider
 
+### Detailed Steps
+
+1. **Housekeeping for Interconnect Lab only**
+
+	A couple of items were not installed on the VMWare image for Interconnect. You will need to install these before you can proceed.
+	
+	- **Install** Java
+
+		Open a terminal and type the following:
+
+		`sudo add-apt-repository ppa:webupd8team/java`
+		
+		`sudo apt update; sudo apt install oracle-java8-installer`
+		
+		`sudo apt install oracle-java8-set-default`
+		
+	- **Upgrade** nodejs
+
+		Recent changes to Ionic require that nodejs be upgraded. In the same terminal, type the following:		
+		`sudo apt-get install python-software-properties`
+		
+		`curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+		
+		`sudo apt-get install nodejs`
+	
+	- **Install** git
+
+		In the same terminal, type the following:
+		
+		`sudo apt-get install git`
+		
+		You will be prompted for the student password it is
+		
+		`Passw0rd!`  The 0 is a zero
+		
+	- **Install** Maven
+
+		In the same terminal, type the following:
+		
+		`sudo apt-get install maven`
+
+		You may be prompted for the student password it is
+		
+		`Passw0rd!`  The 0 is a zero
+
+	- **Install** Ionic Command Line Interface, gulp & Cordova
+		
+		In the same terminal, type the following:
+		
+		`sudo npm install -g ionic gulp cordova`
+
+		You may be prompted for the student password it is
+		
+		`Passw0rd!`  The 0 is a zero
+		
+	- **Restart VM**		
+		
+1. **Download and configure stand-alone app**
+
+	You will use git to retrieve the base application from a git repository. First open a terminal, you will run all the commands from the terminal.
+
+	- **Create** a working directory, **type**:
+	
+		`cd ~/`
+		
+		`mkdir projects`
+		
+		`cd projects`
+		
+	- Use **git** to retrieve source, **type**:
+		
+		`git clone https://github.com/kenatibm/IC2378-empApp.git`
+		
+		`cd IC2378-empApp`
+		
+	- **Install** node modules
+
+		Typically you will not store components of the project that can be easily installed. With Ionic projects you have a package.json file that directs an npm install command what node modules to install, to do that in the IC-2378-empApp directory type:
+		
+		`npm install`
+		
+1. **Test the stand-alone app**
+
+	- **Start** Ionic Server
+
+		From the terminal, type the following:
+		
+		`ionic serve`
+		
+	- **Open** a browser
+		
+		Open a browser, such as Google Chrome, and enter http://locahost:8100. You should see the application running. You can test it out. Right now it does not interact with your APIs, only a mock set of data.
+		
+1. **Create Employee Adapter**
+
+	Adapters are the recommended way to interact with backend systems or APIs. To create an adapter that will provide CRUD functionality is a simple process. Adapters are are created as standalone projects.
+	
+	- **Change** to projects directory
+
+		`cd ~/projects`
+		
+	- Use **mfpdev** to create the employee adapter
+
+		`mfpdev adapter create`
+		
+		Answer the following questions
+		
+		|  Question  |  Answer  |
+		| :--- | :--- |
+		| Enter adapter name  | employeeAdapter |
+		| Select adapter type | HTTP |
+		| Enter group ID |  anything you want such as your company domain |
+		
+	- **Open** Visual Studio Code
+
+	- In Visual Studio Code, **Open** the **employeeAdapter** folder
+	
+		`File | Open Folder`
+
+	- **Open** the adapter file
+
+	
+	- **Change** the domain and procedures
+
+		There are two sections of the adapter.xml file that you will replace, the connection domain and the procedures. Change the following and then **Save** the file.
+	
+		> **Note:** the source is in your snippets folder
+		
+		`<domain>api.us.apiconnect.ibmcloud.com</domain>`
+		
+		```
+		<procedure name="getEmployees" secured="false"/>
+	<procedure name="getEmployeeDetail" secured="false"/>
+	<procedure name="getFavorites" secured="false"/>
+	<procedure name="updateEmployee" secured="false"/>```
+	
+	- **Open** the **employeeAdapter-impl.js** file
+
+		Once the file is open, remove all the code and replace with the following and then **Save** the file:
+
+	> **Note:** the source is in your snippets folder
+	
+	> **Important**: Make sure you replace the CLIENT_ID and CLIENT_SECRET values with the values from when you registered your application with the Developer Portal. Also change the **BASE_URL** value. Your **BASE_URL** is the portion after the domain, for example: if your API URL is https://api.us.apiconnect.ibmcloud.com/kennelsonusibmcom-ic2017/employeecatalog/employees/ then the **BASE_URL** would be kennelsonusibmcom-ic2017/employeecatalog/employees
+		
+		```javascript
+			var CLIENT_ID = '<Your Value Here>'
+			var CLIENT_SECRET = '<Your Value Here>'
+			var ACCEPT = 'application/json'
+			var JSON_CONTENT_TYPE = 'application/json'
+			var URLENCODED_CONTENT_TYPE = 'application/x-www-form-urlencoded'
+			var JSON = 'json'
+			var POST = 'post'
+			var GET = 'get'
+			var PUT = 'put'
+			var DELETE = 'delete'
+			var BASE_URL = '<Your Value Here>'
+			var INPUT = {
+			    method: this.GET,
+			    returnedContentType: JSON,
+			    headers: {
+			        'Accept': ACCEPT,
+			        'Content-Type': JSON_CONTENT_TYPE,
+			        'x-ibm-client-id': CLIENT_ID,
+			        'x-ibm-client-secret': CLIENT_SECRET
+			    }
+			
+			}
+
+			function getEmployees() {
+			    INPUT.path = this.BASE_URL
+			    return MFP.Server.invokeHttp(INPUT)
+			}
+			
+			function getFavorites() {
+			    INPUT.path = this.BASE_URL + '/favorites'
+			    return MFP.Server.invokeHttp(INPUT)
+			}
+			
+			function getEmployeeDetail(_id) {
+			    INPUT.path = this.BASE_URL + '/' + _id
+			    return MFP.Server.invokeHttp(INPUT)
+			}
+			
+			function updateEmployee(_id, favorite) {
+			    var emp = this.getEmployeeDetail(_id); // first, retrieve the existing Employee record for the ID
+			
+			    var newEmp = {}; // empty JSONObject
+			
+			    newEmp._id = emp._id;
+			    newEmp._rev = emp._rev;
+			    newEmp.first_name = emp.first_name;
+			    newEmp.last_name = emp.last_name;
+			    newEmp.address = emp.address;
+			    newEmp.job_title = emp.job_title;
+			    newEmp.email = emp.email;
+			    newEmp.fax = emp.fax;
+			    newEmp.img = emp.img;
+			    newEmp.favorite = favorite;
+			
+			    INPUT.path = this.BASE_URL; // now send the updated JSON doc back to Cloudant (thru APIC)
+			    INPUT.method = this.PUT;
+			    INPUT.body = {
+			        content: newEmp,
+			        contentType: this.URLENCODED_CONTENT_TYPE
+			    }
+			
+			    var rsp = MFP.Server.invokeHttp(INPUT);
+			    return rsp;
+		}
+	
+1. **Build and Deploy the Employee Adapter**
+
+	In this section you will configure mfpdev cli to point to Mobile Foundation on Bluemix. Then you will publish your adapter to Bluemix and test.
+	
+	- **Go back to your terminal session**
+
+		Make sure you are in your adapter directory, type:
+		
+		`cd ~/projects/employeeAdapter`
+		
+	- **Configure mfpdev cli to point to Mobile Foundation on Bluemix**
+
+		`mfpdev server add`
+		
+		|  Question  |  Answer  |
+		|  :---  |  :--- |
+		|  Enter the name of the new server profile  |  bluemix-dev  |
+		|  Enter the fully qualified URL of this server | https://[YOUR URL]:443  |
+		|  Enter the MobileFirst Server administrator login ID: | admin |
+		|  Enter the MobileFirst Server administrator password: | [ADMIN PASSWORD] |
+		|  Enter the context root of the MobileFirst administration services | mfpadmin |
+		|  Enter the MobileFirst Server connection timeout in seconds: | 30 |
+		|  Make this server the default?: | Y |
+		
+		> **Note:** you can find your URL by opening your Mobile Foundation service on your instance of Bluemix. Copy the Server Route.
+		
+	- **Build** the **Employee Adapter**
+
+		Type the following:
+		
+		`mfpdev adapter build`
+
+	- **Publish** the **Employee Adapter**
+
+		Type the following:
+		
+		`mfpdev adapter deploy`
+		
+1. **Test the Employee Adapter****
+
+	- In a Browser, go to Bluemix and **Click** the Mobile Foundation Console
+
+	- **Click** the **Launch Console** button
+	- **Enter** the admin username and password if prompted
+	- **Click** the **employeeAdapter** in the Adapters section on the left
+	- **Click** the **Resources** tab
+	- **Click** the **View Swagger Docs** button
+	- **Click** either the **default** link or the **Show/Hide** link to show the methods
+	- **Click** the **GET /getEmployees** to expand
+	- **Click** the "Try it out!** button
+	- **Scroll** to the response to view the result
+
+	
