@@ -914,6 +914,9 @@ Now that you you have created a datasource with data with a generated API Key, y
 
 	You will use git to retrieve the base application from a git repository. First open a terminal, you will run all the commands from the terminal.
 
+	![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-open-terminal.png?raw=true)
+<div style="page-break-after: always;"></div>
+
 	- **Create** a working directory, **type**:
 	
 		`cd ~/`
@@ -921,12 +924,18 @@ Now that you you have created a datasource with data with a generated API Key, y
 		`mkdir projects`
 		
 		`cd projects`
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-create-directory.png?raw=true)
+<div style="page-break-after: always;"></div>
 		
 	- Use **git** to retrieve source, **type**:
 		
 		`git clone https://github.com/kenatibm/IC2378-empApp.git`
 		
 		`cd IC2378-empApp`
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-git-source.png?raw=true)
+<div style="page-break-after: always;"></div>
 		
 	- **Install** node modules
 
@@ -945,6 +954,9 @@ Now that you you have created a datasource with data with a generated API Key, y
 	- **Open** a browser
 		
 		Open a browser, such as Google Chrome, and enter http://locahost:8100. You should see the application running. You can test it out. Right now it does not interact with your APIs, only a mock set of data.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-base-app-running.png?raw=true)
+<div style="page-break-after: always;"></div>
 		
 1. **Create Employee Adapter**
 
@@ -966,14 +978,20 @@ Now that you you have created a datasource with data with a generated API Key, y
 		| Select adapter type | HTTP |
 		| Enter group ID |  anything you want such as your company domain |
 		
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-create-employee-adapter.png?raw=true)
+<div style="page-break-after: always;"></div>
+		
 	- **Open** Visual Studio Code
+		
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-open-visual-studio-code.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	- In Visual Studio Code, **Open** the **employeeAdapter** folder
 	
 		`File | Open Folder`
-
-	- **Open** the adapter file
-
+		
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-vsc-open-adapter-xml.png?raw=true)
+<div style="page-break-after: always;"></div>
 	
 	- **Change** the domain and procedures
 
@@ -988,16 +1006,24 @@ Now that you you have created a datasource with data with a generated API Key, y
 	<procedure name="getEmployeeDetail" secured="false"/>
 	<procedure name="getFavorites" secured="false"/>
 	<procedure name="updateEmployee" secured="false"/>```
-	
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-vsc-adapter-xml-sections-replaced.png?raw=true)
+<div style="page-break-after: always;"></div>
+		
 	- **Open** the **employeeAdapter-impl.js** file
 
-		Once the file is open, remove all the code and replace with the following and then **Save** the file:
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-vsc-open-employeeAdapter-impl.png?raw=true)
+<div style="page-break-after: always;"></div>
 
-	> **Note:** the source is in your snippets folder
-	
-	> **Important**: Make sure you replace the CLIENT_ID and CLIENT_SECRET values with the values from when you registered your application with the Developer Portal. Also change the **BASE_URL** value. Your **BASE_URL** is the portion after the domain, for example: if your API URL is https://api.us.apiconnect.ibmcloud.com/kennelsonusibmcom-ic2017/employeecatalog/employees/ then the **BASE_URL** would be kennelsonusibmcom-ic2017/employeecatalog/employees
+	- Once the file is open, **remove** all the code and replace with the following and then **Save** the file:
+
+		> **Note:** the source is in your snippets folder
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-vsc-adapter-xml-sections-replaced.png?raw=true)
+<div style="page-break-after: always;"></div>
 		
-		```javascript
+		
+		``` javascript
 			var CLIENT_ID = '<Your Value Here>'
 			var CLIENT_SECRET = '<Your Value Here>'
 			var ACCEPT = 'application/json'
@@ -1062,6 +1088,11 @@ Now that you you have created a datasource with data with a generated API Key, y
 			    var rsp = MFP.Server.invokeHttp(INPUT);
 			    return rsp;
 		}
+```
+
+	
+		> **Important**: Make sure you replace the CLIENT_ID and CLIENT_SECRET values with the values from when you registered your application with the Developer Portal. Also change the **BASE_URL** value. Your **BASE_URL** is the portion after the domain, for example: if your API URL is https://api.us.apiconnect.ibmcloud.com/kennelsonusibmcom-ic2017/employeecatalog/employees/ then the **BASE_URL** would be kennelsonusibmcom-ic2017/employeecatalog/employees
+
 	
 1. **Build and Deploy the Employee Adapter**
 
@@ -1073,6 +1104,8 @@ Now that you you have created a datasource with data with a generated API Key, y
 		
 		`cd ~/projects/employeeAdapter`
 		
+	<div style="page-break-after: always;"></div>
+
 	- **Configure mfpdev cli to point to Mobile Foundation on Bluemix**
 
 		`mfpdev server add`
@@ -1086,8 +1119,14 @@ Now that you you have created a datasource with data with a generated API Key, y
 		|  Enter the context root of the MobileFirst administration services | mfpadmin |
 		|  Enter the MobileFirst Server connection timeout in seconds: | 30 |
 		|  Make this server the default?: | Y |
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-add-server.png?raw=true)
+<div style="page-break-after: always;"></div>
 		
 		> **Note:** you can find your URL by opening your Mobile Foundation service on your instance of Bluemix. Copy the Server Route.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-add-server-route.png?raw=true)
+<div style="page-break-after: always;"></div>
 		
 	- **Build** the **Employee Adapter**
 
@@ -1095,24 +1134,68 @@ Now that you you have created a datasource with data with a generated API Key, y
 		
 		`mfpdev adapter build`
 
-	- **Publish** the **Employee Adapter**
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-build.png?raw=true)
+<div style="page-break-after: always;"></div>
+
+	- **Deploy** the **Employee Adapter**
 
 		Type the following:
 		
 		`mfpdev adapter deploy`
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+<div style="page-break-after: always;"></div>
 		
 1. **Test the Employee Adapter****
 
 	- In a Browser, go to Bluemix and **Click** the Mobile Foundation Console
 
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-open-mobile-foundation-service.png?raw=true)
+<div style="page-break-after: always;"></div>
+
 	- **Click** the **Launch Console** button
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-launch-console.png?raw=true)
+<div style="page-break-after: always;"></div>
+
 	- **Enter** the admin username and password if prompted
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-launch-console-uid-pwd.png?raw=true)
+<div style="page-break-after: always;"></div>
+
 	- **Click** the **employeeAdapter** in the Adapters section on the left
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+<div style="page-break-after: always;"></div>
+
 	- **Click** the **Resources** tab
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+<div style="page-break-after: always;"></div>
+
 	- **Click** the **View Swagger Docs** button
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+<div style="page-break-after: always;"></div>
+
 	- **Click** either the **default** link or the **Show/Hide** link to show the methods
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+<div style="page-break-after: always;"></div>
+
 	- **Click** the **GET /getEmployees** to expand
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+<div style="page-break-after: always;"></div>
+
 	- **Click** the "Try it out!** button
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+<div style="page-break-after: always;"></div>
+
 	- **Scroll** to the response to view the result
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+<div style="page-break-after: always;"></div>
 
 	
