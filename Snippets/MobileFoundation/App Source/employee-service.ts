@@ -77,6 +77,7 @@ export class EmployeeService {
           JSONResponse.address,
           JSONResponse.job_title,
           JSONResponse.email,
+          JSONResponse.mobile,
           JSONResponse.fax,
           JSONResponse.img,
           JSONResponse.favorite);
