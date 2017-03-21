@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Employee List</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-segment [(ngModel)]="filter" (ionChange)="toggleFavorites()">
+        <ion-segment-button value="all">
+            All
+        </ion-segment-button>
+        <ion-segment-button value="favorites">
+            Favorites
+        </ion-segment-button>
+    </ion-segment>
+    <ion-list>
+
+        <button ion-item *ngFor="let employee of employees" (click)="openEmployeeDetail(employee)">
+            <ion-avatar item-left>
+                <img src="{{employee.value.img}}"/>
+            </ion-avatar>
+            <ion-icon [name]="employee.value.favorite == 'yes' ? 'star' : 'star-outline'" item-left>
+                </ion-icon>
+            <h2>{{employee.value.first_name}} {{employee.value.last_name}}</h2>
+            <p>{{employee.value.job_title}}</p>
+        </button>
+
+    </ion-list>
+
+</ion-content>

@@ -26,7 +26,6 @@ All the tools necessary are installed on the virtual machine for this sesssion. 
 	- Webstorm (Commercial) [https://www.jetbrains.com/webstorm/](https://www.jetbrains.com/webstorm/)
 - **Git**: available from [https://git-scm.com/](https://git-scm.com/)
 - **Cordova**: available from [http://cordova.apache.org/](http://cordova.apache.org/) `sudo npm install -g cordova`
-- **Gulp**: available from [http://gulpjs.com/](http://gulpjs.com/) `sudo npm install -g gulp`
 - **Maven**: available from [https://maven.apache.org/](https://maven.apache.org/) `sudo apt-get install maven`
 
 ### IBM Tools
@@ -45,6 +44,64 @@ There are four labs that you will complete, they are:
 
 <div style="page-break-after: always;"></div>
 
+## Lab 0 - Housekeeping
+
+1. **Housekeeping for Interconnect VM Lab only**
+
+	A couple of items were not installed on the VMWare image for Interconnect. You will need to install these before you can proceed.
+	
+	- **Install** Java
+
+		Open a terminal and type the following:
+
+		`sudo add-apt-repository ppa:webupd8team/java`
+		
+		`sudo apt update; sudo apt install oracle-java8-installer`
+		
+		`sudo apt install oracle-java8-set-default`
+		
+	- **Upgrade** nodejs
+
+		Recent changes to Ionic require that nodejs be upgraded. In the same terminal, type the following:		
+		`sudo apt-get install python-software-properties`
+		
+		`curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+		
+		`sudo apt-get install nodejs`
+	
+	- **Install** git
+
+		In the same terminal, type the following:
+		
+		`sudo apt-get install git`
+		
+		You will be prompted for the student password it is
+		
+		`Passw0rd!`  The 0 is a zero
+		
+	- **Install** Maven
+
+		In the same terminal, type the following:
+		
+		`sudo apt-get install maven`
+
+		You may be prompted for the student password it is
+		
+		`Passw0rd!`  The 0 is a zero
+
+	- **Install** Ionic Command Line Interface, gulp & Cordova
+		
+		In the same terminal, type the following:
+		
+		`sudo npm install -g ionic gulp cordova`
+
+		You may be prompted for the student password it is
+		
+		`Passw0rd!`  The 0 is a zero
+		
+	- **Restart VM**		
+	
+	
 ## Lab 1 - Instantiate Bluemix Environment
 In this lab you will be given a Bluemix ID to use. This ID will be destroyed after the conference. 
 
@@ -148,7 +205,7 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 	
 	- With the API Connect Draft Page still open, **Click** the menu icon
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/blbluemix-apis-dp-menu.png?raw=true)
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-menu.png?raw=true)
 		<div style="page-break-after: always;"></div>
 
 	- **Select** the **Dashboard** menu item
@@ -843,73 +900,16 @@ Now that you you have created a datasource with data with a generated API Key, y
 ## Lab 4 - Mobile Foundation
 
 ### Steps
-1. Housekeeping for Interconnect Lab only
-2. Download and configure stand-alone app
-2. Test the stand-alone app
-3. Create Employee Adapter
-4. Build & Deploy the Employee Adapter
-5. Test the Employee Adapter
-4. Add Mobile Foundation Cordova Plugin
-5. Update source code to be Mobile Foundation aware
-6. Create an Ionic Service Provider
+1. Download and configure stand-alone app
+1. Test the stand-alone app
+1. Create Employee Adapter
+1. Build & Deploy the Employee Adapter
+1. Test the Employee Adapter
+1. Update source code to be Mobile Foundation aware
 
 ### Detailed Steps
 
-1. **Housekeeping for Interconnect Lab only**
-
-	A couple of items were not installed on the VMWare image for Interconnect. You will need to install these before you can proceed.
 	
-	- **Install** Java
-
-		Open a terminal and type the following:
-
-		`sudo add-apt-repository ppa:webupd8team/java`
-		
-		`sudo apt update; sudo apt install oracle-java8-installer`
-		
-		`sudo apt install oracle-java8-set-default`
-		
-	- **Upgrade** nodejs
-
-		Recent changes to Ionic require that nodejs be upgraded. In the same terminal, type the following:		
-		`sudo apt-get install python-software-properties`
-		
-		`curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
-		
-		`sudo apt-get install nodejs`
-	
-	- **Install** git
-
-		In the same terminal, type the following:
-		
-		`sudo apt-get install git`
-		
-		You will be prompted for the student password it is
-		
-		`Passw0rd!`  The 0 is a zero
-		
-	- **Install** Maven
-
-		In the same terminal, type the following:
-		
-		`sudo apt-get install maven`
-
-		You may be prompted for the student password it is
-		
-		`Passw0rd!`  The 0 is a zero
-
-	- **Install** Ionic Command Line Interface, gulp & Cordova
-		
-		In the same terminal, type the following:
-		
-		`sudo npm install -g ionic gulp cordova`
-
-		You may be prompted for the student password it is
-		
-		`Passw0rd!`  The 0 is a zero
-		
-	- **Restart VM**		
-		
 1. **Download and configure stand-alone app**
 
 	You will use git to retrieve the base application from a git repository. First open a terminal, you will run all the commands from the terminal.
@@ -1088,13 +1088,11 @@ Now that you you have created a datasource with data with a generated API Key, y
 			    var rsp = MFP.Server.invokeHttp(INPUT);
 			    return rsp;
 		}
-```
-
+	```
 	
 		> **Important**: Make sure you replace the CLIENT_ID and CLIENT_SECRET values with the values from when you registered your application with the Developer Portal. Also change the **BASE_URL** value. Your **BASE_URL** is the portion after the domain, for example: if your API URL is https://api.us.apiconnect.ibmcloud.com/kennelsonusibmcom-ic2017/employeecatalog/employees/ then the **BASE_URL** would be kennelsonusibmcom-ic2017/employeecatalog/employees
-
 	
-1. **Build and Deploy the Employee Adapter**
+5. **Build and Deploy the Employee Adapter**
 
 	In this section you will configure mfpdev cli to point to Mobile Foundation on Bluemix. Then you will publish your adapter to Bluemix and test.
 	
@@ -1165,37 +1163,372 @@ Now that you you have created a datasource with data with a generated API Key, y
 
 	- **Click** the **employeeAdapter** in the Adapters section on the left
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-open-adapter.png?raw=true)
 <div style="page-break-after: always;"></div>
 
 	- **Click** the **Resources** tab
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-adapter-resources.png?raw=true)
 <div style="page-break-after: always;"></div>
 
 	- **Click** the **View Swagger Docs** button
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-adapter-view-swagger-button.png?raw=true)
 <div style="page-break-after: always;"></div>
 
 	- **Click** either the **default** link or the **Show/Hide** link to show the methods
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-adapter-expand.png?raw=true)
 <div style="page-break-after: always;"></div>
 
 	- **Click** the **GET /getEmployees** to expand
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-adapter-expand-get-employees.png?raw=true)
 <div style="page-break-after: always;"></div>
 
 	- **Click** the "Try it out!** button
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-adapter-get-employees-try-it-out.png?raw=true)
 <div style="page-break-after: always;"></div>
 
 	- **Scroll** to the response to view the result
 
-		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-adapter-get-employees-try-it-out-response.png?raw=true)
 <div style="page-break-after: always;"></div>
 
+1. **Update source code to be Mobile Foundation aware**
 	
+	- Using your terminal session, **change** directories to ~/projects/IC2378-empApp 
+	- Add a platform by typing
+
+		`cordova platform add android`
+		
+		and/or if on a Mac and want to use iOS
+		
+		`cordova platform add ios`
+	
+	- Add the Mobile Foundation plugin by typing
+
+		`cordova plugin add cordova-plugin-mfp`
+		
+	- **Open** Visual Studio Code if not already open
+	- **Click** File | Open Folder ... and open the ~/projects/IC2378-empApp folder
+	- **Expand** the **src/app** directory
+
+	- **Open** the app.component.ts file
+
+	- **Replace** the existing code with the following: (Code is available in the Snippets/MFF directory):
+
+		```
+		import { Component, Renderer } from '@angular/core';
+		import { Platform, AlertController, App } from 'ionic-angular';
+		import { StatusBar, Splashscreen } from 'ionic-native';
+		
+		import { TabsPage } from '../pages/tabs/tabs';
+		
+		
+		@Component({
+		  templateUrl: 'app.html'
+		})
+		export class MyApp {
+		  private rootPage: any;
+		  private AuthHandler: any;
+		  private nav: any;
+		
+		  constructor(platform: Platform, public renderer: Renderer, private app: App, public alertCtrl: AlertController) {
+		
+		    platform.ready().then(() => {
+		      // Okay, so the platform is ready and our plugins are available.
+		      // Here you can do any higher level native things you might need.
+		      StatusBar.styleDefault();
+		      Splashscreen.hide();
+		    });
+		
+		    renderer.listenGlobal('document', 'mfpjsloaded', () => {
+		      console.log('--> mfpjsloaded has fired');
+		
+		      this.rootPage = TabsPage;
+		      this.nav = this.app.getActiveNav();
+		      this.nav.setRoot( this.rootPage );
+		
+		      this.AuthInit();
+		
+		    })
+		
+		  }
+		
+		  AuthInit() {
+		    console.log('--> In AuthInit()');
+		
+		    this.AuthHandler = WL.Client.createSecurityCheckChallengeHandler("UserLogin");
+		    this.AuthHandler.handleChallenge = ((response) => {
+		      console.log('--> in handleChallenge()');
+		      this.DisplayLogin();
+		    });
+		  }
+		
+		  DisplayLogin() {
+		    let prompt = this.alertCtrl.create({
+		      title: 'Login',
+		      message: "Enter your username and password",
+		      inputs: [
+		        {
+		          name: 'username',
+		          placeholder: 'Username'
+		        },
+		        {
+		          name: 'password',
+		          placeholder: 'Password',
+		          type: 'password'
+		        },
+		      ],
+		      buttons: [
+		        {
+		          text: 'Login',
+		          handler: data => {
+		            console.log('---> Trying to auth with user', data);
+		            this.AuthHandler.submitChallengeAnswer(data);
+		          }
+		        }
+		      ]
+		    });
+		    prompt.present();
+		  }
+		}
+		```
+		<div style="page-break-after: always;"></div>
+
+	- **Open** the called **pages/home.html**
+
+	- **Replace** the existing code with the following: (Code is available in the Snippets/MFF directory):
+
+
+		```
+		<ion-header>
+		    <ion-navbar>
+		        <button ion-button menuToggle>
+		            <ion-icon name="menu"></ion-icon>
+		        </button>
+		        <ion-title>Employee List</ion-title>
+		    </ion-navbar>
+		</ion-header>
+		
+		<ion-content>
+		
+		    <ion-segment [(ngModel)]="filter" (ionChange)="toggleFavorites()">
+		        <ion-segment-button value="all">
+		            All
+		        </ion-segment-button>
+		        <ion-segment-button value="favorites">
+		            Favorites
+		        </ion-segment-button>
+		    </ion-segment>
+		    <ion-list>
+		
+		        <button ion-item *ngFor="let employee of employees" (click)="openEmployeeDetail(employee)">
+		            <ion-avatar item-left>
+		                <img src="{{employee.value.img}}"/>
+		            </ion-avatar>
+		            <ion-icon [name]="employee.value.favorite == 'yes' ? 'star' : 'star-outline'" item-left>
+		                </ion-icon>
+		            <h2>{{employee.value.first_name}} {{employee.value.last_name}}</h2>
+		            <p>{{employee.value.job_title}}</p>
+		        </button>
+		
+		    </ion-list>
+		
+		</ion-content>
+		```
+
+	- **Open** the called **pages/home.ts**
+
+	- **Replace** the existing code with the following: (Code is available in the Snippets/MFF directory):
+
+		```
+		import { Component } from '@angular/core';
+		
+		import { NavController } from 'ionic-angular';
+		import { EmployeeService } from '../../providers/employee-service';
+		import { EmployeeDetailPage } from '../employee-detail/employee-detail';
+		
+		@Component({
+		  selector: 'page-home',
+		  templateUrl: 'home.html'
+		})
+		export class HomePage {
+		
+		  employees: {};
+		  filter: string;
+		
+		  constructor(public navCtrl: NavController, public employeeService: EmployeeService) {
+		   }
+		
+		  ionViewDidEnter() {
+		    this.employeeService.findAll().then(
+		      (data) => { this.employees = data }
+		    );
+		    this.filter = 'all';
+		  };
+		
+		  openEmployeeDetail(employee) {
+		    this.navCtrl.push(EmployeeDetailPage, employee);
+		  };
+		
+		  toggleFavorites() {
+		    if (this.filter == 'all') {
+		      this.employeeService.findAll().then(data => (this.employees = data))
+		    } else {
+		      this.employeeService.getFavorites().then(data => (this.employees = data))
+		    }
+		  };
+		}
+		```
+		<div style="page-break-after: always;"></div>
+
+	- **Open** the called **providers/employee-service.ts**
+
+	- **Replace** the existing code with the following: (Code is available in the Snippets/MFF directory):
+
+	```
+	import { Injectable } from '@angular/core';
+	
+	class Employee {
+	  constructor(
+	    public _id: string,
+	    public _rev: string,
+	    public first_name: string,
+	    public last_name: string,
+	    public address: string,
+	    public job_title: string,
+	    public email: string,
+	    public fax: string,
+	    public img: string,
+	    public favorite: string) { }
+	
+	}
+	
+	@Injectable()
+	export class EmployeeService {
+	
+	  constructor() { }
+	
+	  findAll() {
+	    console.log('--> in employeeService.findAll()');
+	    let employees: Array<any>;
+	
+	    return new Promise(resolve => {
+	
+	      let dataRequest = new WLResourceRequest("/adapters/employeeAdapter/getEmployees", WLResourceRequest.GET);
+	      dataRequest.send().then((response) => {
+	        console.log('--> data loaded from employeeAdapter');
+	        employees = response.responseJSON.rows;
+	        resolve(employees);
+	      }, (failure) => {
+	        console.log('--> failed to load from employeeAdapter', failure);
+	        resolve('error');
+	      })
+	    });
+	
+	  }
+	
+	  getFavorites() {
+	    console.log('--> in employeeService.getFavorites()');
+	    let favorites: Array<any>;
+	
+	    return new Promise(resolve => {
+	      let dataRequest = new WLResourceRequest("/adapters/employeeAdapter/getFavorites", WLResourceRequest.GET);
+	      dataRequest.send().then((response) => {
+	        console.log('--> data loaded from employeeAdapter.getFavorites()');
+	        favorites = response.responseJSON.rows;
+	        resolve(favorites);
+	      }, (failure) => {
+	        console.log( '--> failed in employeeService.getFavorites()', failure);
+	        resolve('error');
+	      })
+	    })
+	
+	  }
+	
+	  findById(id) {
+	    console.log('--> in employeeService.findById( ' + id + ')');
+	
+	    return new Promise(resolve => {
+	
+	      let dataRequest = new WLResourceRequest("/adapters/employeeAdapter/getEmployeeDetail/", WLResourceRequest.GET);
+	      dataRequest.setQueryParameter("params", "['" + id + "']");
+	
+	      dataRequest.send().then((response) => {
+	        console.log('--> data loaded from employeeAdapter');
+	
+	        let JSONResponse = response.responseJSON;
+	        let newEmp = new Employee(
+	          JSONResponse._id,
+	          JSONResponse._rev,
+	          JSONResponse.first_name,
+	          JSONResponse.last_name,
+	          JSONResponse.address,
+	          JSONResponse.job_title,
+	          JSONResponse.email,
+	          JSONResponse.fax,
+	          JSONResponse.img,
+	          JSONResponse.favorite);
+	
+	        resolve(newEmp);
+	
+	      }, (failure) => {
+	        console.log('--> failed to load from employeeAdapter', failure);
+	        resolve('error');
+	      })
+	
+	    })
+	  }
+	
+	  save(id, favorite) {
+	    console.log('--> in employeeService.save( ' + id + ': is now ' + favorite);
+	
+	    return new Promise((resolve, reject) => {
+	
+	      let dataRequest = new WLResourceRequest("/adapters/employeeAdapter/updateEmployee/", WLResourceRequest.POST);
+	      let params      = [id, favorite];
+	      let JSONParams  = {'params': JSON.stringify(params)};
+	
+	      dataRequest.addHeader('Content-Type', 'application/x-www-form-urlencoded');
+	      dataRequest.addHeader('Accept', 'application/json');
+	      dataRequest.sendFormParameters(JSONParams).then(
+	        (success) => {
+	          console.log('--> employeeService.save() succeeded');
+	          resolve('success');
+	        },
+	        (failure) => {
+	          console.log('--> employeeService.save() failed', failure);
+	          reject(failure);
+	        })
+	    })
+	  }
+	}
+	```
+		<div style="page-break-after: always;"></div>
+
+	- **Register** the app with Mobile Foundation server
+
+		`mfpdev app register`
+		
+		`cordova prepare`
+		
+	- **Open** declarations.d.ts using Visual Studio Code
+
+		```
+		/// <reference path="../plugins/cordova-plugin-mfp/typings/worklight.d.ts" />
+		```
+
+	- **Build** the app
+
+		`ionic build`
+		
+	- **Test** the application
+
+		for iOS type: `ionic emulate ios --target="iPhone-7, 10.2"`
+		for Android type `ionic emulate android`
+		
+
+	- The emulator you choose should open and you should see something like below.
