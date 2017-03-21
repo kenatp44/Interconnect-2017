@@ -1524,6 +1524,8 @@ Now that you you have created a datasource with data with a generated API Key, y
 	- **Build** the app
 
 		`ionic build`
+
+	<div style="page-break-after: always;"></div>
 		
 	- **Test** the application
 
@@ -1532,3 +1534,5 @@ Now that you you have created a datasource with data with a generated API Key, y
 		
 
 	- The emulator you choose should open and you should see something like below.
+
+		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/ios-emulator.png?raw=true)
