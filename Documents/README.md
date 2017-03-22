@@ -42,7 +42,7 @@ There are four labs that you will complete, they are:
 
 3. **Mobile Foundation** (aka MobileFirst Foundation): In this lab, you will develop both the server-side and the client-side of an Ionic 2/Angular 2 hybrid mobile application, deployed to both iOS and Android devices using Apache Cordova. You will also develop a Javascript Adapter that connects to the API exposed from API Connect, and then consume that adapter from the Ionic/Angular application code.
 
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 ## Lab 0 - Housekeeping
 
@@ -122,52 +122,52 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 	- **Click** the **Log In** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-login.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 		
 	- Enter your Bluemix user name (Email address or IBMId) and **Click** the **Continue** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-login-username.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 		
 	- Enter your Bluemix user password and **Click** the **Log In** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-login-password.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 		
 	- If successful you should see a screen similar to the following.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-home.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 		
 1. **Create a Cloudant Service**
 	- **Click** the **Catalog** link in the upper right section of the Bluemix Home page.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-click-catalog.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 		
 	- **Click** the **Data & Analytics** link in the Services menu on the left hand side of the page
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-data-analytics-menu-link.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 		
 	- **Click** the **Cloudant NoSQL DB** link from the results	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-link.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 		
 	- Change the **Service name** to Interconnect2017-cloudant
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-setup-service-name.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 		
 	- **Scroll** to the Pricing Plans and ensure that the **Lite** plan is selected, then **Click** the **Create** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-setup-pricing.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 		
 	- When the service is created you should see a screen similar to the following. You can click the LAUNCH button if you like. However you will be coming back to this in a future lab
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-setup-complete.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 1. **Create API Connect Service**
 	- **Click** the **Catalog** link in the upper right section of the Bluemix Home page.
@@ -177,27 +177,27 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 	- **Click** the **APIs** link in the Services menu on the left hand side of the page
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-menu-link.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **API Connect** link from the results
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-api-connect-link.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Change the **Service name** to Interconnect2017-apic
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-setup-service-name.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Scroll** to the Pricing Plans and ensure that the **Essentials** plan is selected, then **Click** the **Create** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-setup-pricing.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- When the service is created you sould see a screen similar to the following.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-setup-complete.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 1. **Create Developer Portal for API Connect**
 
@@ -206,57 +206,57 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 	- With the API Connect Draft Page still open, **Click** the menu icon
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-menu.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- **Select** the **Dashboard** menu item
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-menu-dashboard.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- You will notice that you have a **Sandbox** catalog already defined but you will want to create a catalog for your application. To do that, **Click** the **Add** button.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-add-button.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- Then **Click** the **Catalog** menu option
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-add-catalog-button.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- When the **Add Catalog** dialog opens, enter **EmployeeCatalog** for the **Display Name**. This will automatically generate the Catalog Name in lowercase. Then **Click** the **Add** button.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-add-catalog-dialog.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- **Click** the **EmployeeCatalog** to display the catalog properties
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-employee-catalog.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- **Click** the **Settings** tab
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-employee-catalog-settings.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- **Click** the **Portal** settings option
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-employee-catalog-settings-portal.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- **Select** the **IBM Developer Portal** option for the Portal Configuration. Note the Portal URL. You may want to open the URL in a new tab for later, however the URL will not be ready until after you have saved the configuration and the developer portal has been generated and activated.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-employee-catalog-settings-portal-IBM-portal.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- **Click** the **Save** button.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-employee-catalog-settings-save.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- After saving you should see a dialog letting you know that the developer portal is being created.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-employee-catalog-creating-developer-portal.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- You will recieve an email with a link for activation and to change the admin password. Click the link to activate the portal
 
@@ -264,7 +264,7 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 	- **Click** the **Catalog** link in the upper right section of the Bluemix Home page.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-click-catalog.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 			
 	- **Click** the **Mobile** link in the Apps menu on the left hand side of the page.
 		
@@ -305,14 +305,14 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 	- When the server is provisioned, you will see the following screen.  Here you can 1) Launch the server console, 2) View the administrator password and 3) Add the analytics server (which will not be convered in this session).
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-complete.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 1. **Conclusion**: Lab Complete
 
 	The lab is complete. To confirm your setup of the necessary services, **Click** the **Bluemix** icon in the upper left side of the page. This will display the services and apps that have been provisioned. Your configuration should look similar to the one below.
 
 	![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-setup-complete.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 ## Lab 2 - Create Employee Database using Cloudant
 
@@ -333,7 +333,7 @@ In this lab you will create a database in Cloudant that will be used to store em
 	- From the Bluemix **Dashboard**, found by clicking the hamburger icon in the upper left corner of the screen and selecting **Dashboard**, locate the Interconnect2017-cloudant service and **Click** it. 
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-dashboard-cloudant-service.png?raw=true)
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 				
 1. **Create the Employee Database (employees)**
 
@@ -348,17 +348,17 @@ In this lab you will create a database in Cloudant that will be used to store em
 	- To create a new database, **Click** the **Create Database** button on the Databases page.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-create-database-button.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Enter **employees** for the database name and **Click** the **Create** button.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-create.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- The database was successfully created if you see a message that says **Database created successfully**
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-create-success.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 1. **Use terminal to load Employee Database with records**
 
@@ -367,17 +367,17 @@ In this lab you will create a database in Cloudant that will be used to store em
 	- With the Cloudant service open in the first browser window/tab, **Click** the **Service Credentials** tab
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service-credentials-menu.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 	
 	- **Click** the **View Credentials** drop-down
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service-credentials-view.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 	
 	- **Copy** the **URL** to the clipboard. The URL will contain the username and password as well as the url. Include the `https://` all the way to the end of the `cloudant.com`.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service-credentials-url.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Open a terminal window.
 	
@@ -398,14 +398,14 @@ In this lab you will create a database in Cloudant that will be used to store em
 		`curl -H "Content-Type:application/json" -d @employeeData.json -X POST "$DB/employees/_bulk_docs"`
 
 		> **Note:** you can copy/paste the commands that are in a file `terminal commands.txt` under `Interconnect 2017/Snippets/Cloudant` directory.
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 		
 1. **Confirm employee records exist**
 
 	- Return to the browser tab that has the Cloudant management console open. Refresh the browser to show the list of employee records. Your screen should like like the following:
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-refresh.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 1. **Create an employee list view**
 
@@ -414,17 +414,17 @@ In this lab you will create a database in Cloudant that will be used to store em
 	- To create a view, **Click** the **Plus Sign** for the **Design Documents** menu option to open the menu.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-menu.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **New View** menu option.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Set the View **Name** the view **employeeList** and name the index **idxEmployeeList**.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-name-view-employeeList.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Copy the snippit in `employeeList-view.json` under `Interconnect 2017/Snippets/Cloudant` directory then past over the existing map function or type the following:
 
@@ -442,17 +442,17 @@ In this lab you will create a database in Cloudant that will be used to store em
 			}
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-name-view-employeeList-map.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **Create Document and Build Index** button.
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view-create.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- The page should look similar to the page below after the view has been successfully created.
 			
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view-complete.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 1. **(Optional) Create an employee favorites view**
 
@@ -461,17 +461,17 @@ In this lab you will create a database in Cloudant that will be used to store em
 	- To create a view, **Click** the **Plus Sign** for the **Design Documents** menu option to open the menu.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-menu-o.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **New View** menu option.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view-o.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Set the View **Name** the view **employeeFavorites** and name the index **idxEmployeeFavorites**.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-name-view-employeeFavorites.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Copy the snippit in `employeeList-view.json` under `Interconnect 2017/Snippets/Cloudant` directory then past over the existing map function or type the following:
 
@@ -489,18 +489,18 @@ In this lab you will create a database in Cloudant that will be used to store em
 			}
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-name-view-employeeFavorites-map.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **Create Document and Build Index** button.
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view-create-o.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 
 	- The page should look similar to the page below after the view has been successfully created.
 			
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-new-view-complete-o.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 1. **Generate an application key for external access**
 
@@ -509,22 +509,22 @@ In this lab you will create a database in Cloudant that will be used to store em
 	- **Click** the **Permissions** menu option
 				
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-permissions-menu.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **Generate API Key** button
 				
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-permissions-generate-api-key.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Copy** the generated **Key** and **Password**
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-permissions-key-password.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Check** the **_writer** permission for the generated key
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-permissions-writer.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 ## Lab 3 - API Connect
 
@@ -544,39 +544,39 @@ Now that you you have created a datasource with data with a generated API Key, y
 	- Start at the API Connect Dashboard then **Click** the API Connect Menu
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-dp-menu.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Select** the **Drafts** menu option
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-menu-drafts.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Click** the **APIs** tab
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-drafts-api-menu.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Click** the **Add** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-add-api-button.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Select** the **New API** menu option
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-add-api-new-api.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- When the **New API** dialog opens, **set** the **Title** to **EmployeeDirectory** and **set** the **Base Path** to **/** (slash), then open the **Additional properties**.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-add-new-api-dialog-set-title.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Set** the **Security** field to **Client ID and secret** 
 		- and **set** the **Gateway** to **Datapower** 
 		- and finally **Click** the **Create API** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-add-new-api-dialog-set-gateway.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 1. **Configure the API**
 	Now that you have created the API with some basic configuration, it is time to complete the configuration by adding the API path definitions and creating the assembly. There will be a total of three paths that you will create. The steps for the 
@@ -584,62 +584,62 @@ Now that you you have created a datasource with data with a generated API Key, y
 	- **Click** the **Paths** menu option
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Click** the **Add Path** button (⊕)
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-add.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Set** the **Path** field to **/employees** 
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-set-title.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Click** the **GET** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Set** the **Operation ID** to **employee.findAll** and set the **Description** to **Retieves a list of all Employees**
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-parameters.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Click** the **Add Operation** link
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-add-operation.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Select** the **PUT** operation
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-add-operation-put.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Scroll** to the **PUT** operation you just added and expand it by **clicking** the **PUT** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-put.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Set** the **Opertation ID** to **employee.upsert** and set the **Description** to **Updates or adds an employee record**
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-put-parameters.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Click** the **Add Parameter** link for the **PUT** operation and then **Select** the **Add new parameter** option
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-put-add-parameters.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Set** the **Name** field to **data** and **change** the **Located in** to **Body** also **check** the **Required** checkbox
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-put-parameter-options.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Click** the **Save** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-save.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Repeat for two more paths**
 
@@ -653,19 +653,19 @@ Now that you you have created a datasource with data with a generated API Key, y
 		- **Path 2** - /employees/favorites
 	
 			![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-favorites.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 		- **Path 3** - /employees/{id}
 
 			![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-employee-by-id.png?raw=true)
 
 			![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-get-employee-by-id-parameter.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Click** the **Save** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-path-save-2.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 1. **Build the API Assembly**
 
@@ -674,27 +674,27 @@ Now that you you have created a datasource with data with a generated API Key, y
 	- **Click** the **Assembly** tab
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-tab.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Drag & Drop** a **Operation Switch** operation onto the assembly workspace right before the invoke operation.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-operation-switch.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- Next, **Drag & Drop** the existing **invoke** operation so that it is part of the **Operation Switch** operation.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-move-invoke.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Drag & Drop** three more **invoke** operations under the **Operation Switch** operation.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-add-three-invoke-operations.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Click** the **Operation Switch** on the assembly workspace.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-click-operation-switch.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- For each of the four switch operations, map to one of the four paths created earlier
 	
@@ -707,13 +707,13 @@ Now that you you have created a datasource with data with a generated API Key, y
 	
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-map-operation-case.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	
 	- When mapped, your switch should look similar to the following
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-map-operation-case-complete.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- Configure the four **invoke** operations that are under the **Operation Switch** operation. This will require you to use the Cloudant REST services. You may want to launch your instance of Cloudant, if it is not already open.  Don't forgot to use your Cloudant URLs. The Username is the Key you generated earlier and the Password is the the Password that was generated.
 
@@ -727,88 +727,88 @@ Now that you you have created a datasource with data with a generated API Key, y
 	- **Click** the **Save** button to save your assembly
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-design-assembly-save.png?raw=true)
-<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 1. **Deploy the API**
 
 	- **Click** the **All APIs** link
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-all-apis-link?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **Products** link
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-products-link.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **+ Add** button then **Select** the **New Product** menu option
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-add-new-product-link.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- When the **New Product** dialog opens, **Set** the **Title** to EmployeeAPIs and **Click** the **Create Product** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-new-product-dialog.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- This will create a new product with default settings.  **Click** the **APIs** menu option on the left hand side of the page.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-add-api.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **(+)** Add button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-add-api-button.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- When the **Select APIs** dialog opens, **Check** the **EmployeeDirectory** API and **Click** the **Apply** button.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-add-api-dialog.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **Save** button to save your changes.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-save.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **Publish** button. Looks like a cloud with an up arrow.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-button.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Select** the **EmployeeCatalog** as the target	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-employee-catalog.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the API Connect menu
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-apic-menu.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Select** the **Dashboard**
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-apic-menu-dashboard.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **EmployeeCatalog** to open
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-open-employee-catalog.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **EmployeeAPIs** menu option (three dots)
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-employeeapi-menu.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Select** the **Publish** option
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-employeeapi-menu-publish.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- When the **Edit visibility** dialog opens, **Click** the **Publish** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-publish-employeeapi-dialog.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Congratulations, your API is now published to the Developer Portal!
 
@@ -819,82 +819,82 @@ Now that you you have created a datasource with data with a generated API Key, y
 	- The first step in registering your app is to create a user account. Open your Developer Portal. If you forgot the URL of the Developer Portal you can always go back to the EmployeeCatalog Settings, there you will find the link for your Developer Portal.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-register-app-portal-url.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- To create your user account, **Click** the **Create an account** link on the top right side of the page.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-create-account.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Complete the **Create new account** form by entering your Username, Developer Organization, and Captcha then **Click** the **Create new account** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-create-account-screen.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Next, **Login** to the Developer Portal
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-login.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Once logged in, the first step is to register an application. To do that **Click** the **Apps** tab at the top of the page
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-apps-tab.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **Create new App** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-apps-create-app-button.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- With the **Register Application** page open, enter a title of **Employee Directory** and **Click** the **Submit** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-create-new-app-page.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Once the app has been register **Check** the **Show Client Secret** checkbox. When the Client Secret is revealed, copy and paste it to a safe location. Once you leave this screen you will not have a chance to retrieve it again. You can also **Check** the **Client ID** checkbox to reveal the Client ID, unlike the Client Secret you can retrieve this later. 
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-app-settings-page.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Now that there is a registered application, you will need to subscribe to an API Product. To view what API Products are avaialble **Click** the **API Products** tab at the top of the page.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-api-products.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **EmployeeAPIs**
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-employee-api.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **Subscribe** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-api-subscribe-button.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- When the **Subscribe** dialog opens, check the **Employee Directory** application and **Click** the **Subscribe** button
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-api-subscribe-dialog.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- You can test your APIs **Clicking** the **EmployeeDirectory** menu item on the left side of the page.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-test-api.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **GET /employees** service on the left side of the page.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-test-api-get-employee.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **Call Operation** button for the GET /employees service.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-test-api-call-operation.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Scroll** the right side of the page to see the results
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apic-developer-test-api-response.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 
 ## Lab 4 - Mobile Foundation
@@ -915,7 +915,7 @@ Now that you you have created a datasource with data with a generated API Key, y
 	You will use git to retrieve the base application from a git repository. First open a terminal, you will run all the commands from the terminal.
 
 	![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-open-terminal.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Create** a working directory, **type**:
 	
@@ -926,7 +926,7 @@ Now that you you have created a datasource with data with a generated API Key, y
 		`cd projects`
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-create-directory.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 		
 	- Use **git** to retrieve source, **type**:
 		
@@ -935,7 +935,7 @@ Now that you you have created a datasource with data with a generated API Key, y
 		`cd IC2378-empApp`
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-git-source.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 		
 	- **Install** node modules
 
@@ -956,7 +956,7 @@ Now that you you have created a datasource with data with a generated API Key, y
 		Open a browser, such as Google Chrome, and enter http://locahost:8100. You should see the application running. You can test it out. Right now it does not interact with your APIs, only a mock set of data.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-base-app-running.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 		
 1. **Create Employee Adapter**
 
@@ -979,19 +979,19 @@ Now that you you have created a datasource with data with a generated API Key, y
 		| Enter group ID |  anything you want such as your company domain |
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-create-employee-adapter.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 		
 	- **Open** Visual Studio Code
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-open-visual-studio-code.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- In Visual Studio Code, **Open** the **employeeAdapter** folder
 	
 		`File | Open Folder`
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-vsc-open-adapter-xml.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 	
 	- **Change** the domain and procedures
 
@@ -1008,19 +1008,19 @@ Now that you you have created a datasource with data with a generated API Key, y
 	<procedure name="updateEmployee" secured="false"/>```
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-vsc-adapter-xml-sections-replaced.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 		
 	- **Open** the **employeeAdapter-impl.js** file
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-vsc-open-employeeAdapter-impl.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- Once the file is open, **remove** all the code and replace with the following and then **Save** the file:
 
 		> **Note:** the source is in your snippets folder
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-vsc-adapter-xml-sections-replaced.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 		
 		
 		``` javascript
@@ -1102,7 +1102,7 @@ Now that you you have created a datasource with data with a generated API Key, y
 		
 		`cd ~/projects/employeeAdapter`
 		
-	<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Configure mfpdev cli to point to Mobile Foundation on Bluemix**
 
@@ -1119,12 +1119,12 @@ Now that you you have created a datasource with data with a generated API Key, y
 		|  Make this server the default?: | Y |
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-add-server.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 		
 		> **Note:** you can find your URL by opening your Mobile Foundation service on your instance of Bluemix. Copy the Server Route.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-add-server-route.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 		
 	- **Build** the **Employee Adapter**
 
@@ -1133,7 +1133,7 @@ Now that you you have created a datasource with data with a generated API Key, y
 		`mfpdev adapter build`
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-build.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Deploy** the **Employee Adapter**
 
@@ -1142,59 +1142,59 @@ Now that you you have created a datasource with data with a generated API Key, y
 		`mfpdev adapter deploy`
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-adapter-deploy.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 		
 1. **Test the Employee Adapter****
 
 	- In a Browser, go to Bluemix and **Click** the Mobile Foundation Console
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-open-mobile-foundation-service.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **Launch Console** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-launch-console.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Enter** the admin username and password if prompted
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-launch-console-uid-pwd.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **employeeAdapter** in the Adapters section on the left
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-open-adapter.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **Resources** tab
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-adapter-resources.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **View Swagger Docs** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-adapter-view-swagger-button.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** either the **default** link or the **Show/Hide** link to show the methods
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-adapter-expand.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the **GET /getEmployees** to expand
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-adapter-expand-get-employees.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Click** the "Try it out!** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-adapter-get-employees-try-it-out.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 	- **Scroll** to the response to view the result
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-console-adapter-get-employees-try-it-out-response.png?raw=true)
-<div style="page-break-after: always;"></div>
+	<div style="page-break-after: always;"></div>
 
 1. **Update source code to be Mobile Foundation aware**
 	
@@ -1296,7 +1296,7 @@ Now that you you have created a datasource with data with a generated API Key, y
 		  }
 		}
 		```
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- **Open** the called **pages/home.html**
 
@@ -1383,7 +1383,7 @@ Now that you you have created a datasource with data with a generated API Key, y
 		  };
 		}
 		```
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- **Open** the called **providers/employee-service.ts**
 
@@ -1507,7 +1507,7 @@ Now that you you have created a datasource with data with a generated API Key, y
 	  }
 	}
 	```
-		<div style="page-break-after: always;"></div>
+			<div style="page-break-after: always;"></div>
 
 	- **Register** the app with Mobile Foundation server
 
@@ -1525,7 +1525,7 @@ Now that you you have created a datasource with data with a generated API Key, y
 
 		`ionic build`
 
-	<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 		
 	- **Test** the application
 
