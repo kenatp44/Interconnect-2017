@@ -719,10 +719,10 @@ Now that you you have created a datasource with data with a generated API Key, y
 
 		|  Title  |  URL  |  Username  |  Password  |
 		|  :---  |  :---  |  :---------  |  :---------  |
-		|  findByID  |  `https://**[REPLACE]**-bluemix.cloudant.com/employees/$(request.parameters.id)`  |  [Your Cloudant Key]  |  [Your Cloudant Key Password]  |
-		|  getFavorites  |  `https://**[REPLACE]**-bluemix.cloudant.com/employees/_design/employeeFavorites/_view/idxEmployeeFavorites?limit=20&reduce=false`  |  [Your Cloudant Key]  |  [Your Cloudant Key Password]  |
-		|  findAll  |  `https://**[REPLACE]**-bluemix.cloudant.com/employees/_design/employeeList/_view/idxEmployeeList?limit=20&reduce=false`  |  [Your Cloudant Key]  |  [Your Cloudant Key Password]  |
-		|  upsert  |  `https://**[REPLACE]**-bluemix.cloudant.com/employees/$(request.body._id)`  |  [Your Cloudant Key]  |  [Your Cloudant Key Password]  |
+		|  findByID  |  https://**[REPLACE]**-bluemix.cloudant.com/employees/$(request.parameters.id)  |  [Your Cloudant Key]  |  [Your Cloudant Key Password]  |
+		|  getFavorites  |  https://**[REPLACE]**-bluemix.cloudant.com/employees/\_design/employeeFavorites/\_view/idxEmployeeFavorites?limit=20&reduce=false  |  [Your Cloudant Key]  |  [Your Cloudant Key Password]  |
+		|  findAll  |  https://**[REPLACE]**-bluemix.cloudant.com/employees/\_design/employeeList/\_view/idxEmployeeList?limit=20&reduce=false  |  [Your Cloudant Key]  |  [Your Cloudant Key Password]  |
+		|  upsert  |  https://**[REPLACE]**-bluemix.cloudant.com/employees/$(request.body._id)  |  [Your Cloudant Key]  |  [Your Cloudant Key Password]  |
 
 	- **Click** the **Save** button to save your assembly
 	
