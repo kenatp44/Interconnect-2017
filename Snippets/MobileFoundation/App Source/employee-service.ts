@@ -9,6 +9,7 @@ class Employee {
     public address: string,
     public job_title: string,
     public email: string,
+    public mobile: string,
     public fax: string,
     public img: string,
     public favorite: string) { }
