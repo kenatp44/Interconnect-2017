@@ -365,7 +365,8 @@ In this lab you will create a database in Cloudant that will be used to store em
 	- With the Cloudant service open, **Click** the **Manage** tab and then **Click** the **LAUNCH** button to open the Cloudant management console in a new tab in the browser.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service.png?raw=true)
-	<div style="page-break-after: always;"></div>		
+		<div style="page-break-after: always;"></div>		
+		
 	- Once the Cloudant management console opens, **Click** the **Database** menu option to show the list of databases.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-menu.png?raw=true)
