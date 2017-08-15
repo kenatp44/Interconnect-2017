@@ -1043,7 +1043,8 @@ Now that you you have created a datasource with data with a generated API Key, y
 		<procedure name="getEmployees" secured="false"/>
 	<procedure name="getEmployeeDetail" secured="false"/>
 	<procedure name="getFavorites" secured="false"/>
-	<procedure name="updateEmployee" secured="false"/>```
+	<procedure name="updateEmployee" secured="false"/>
+	```
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-vsc-adapter-xml-sections-replaced.png?raw=true)
 
