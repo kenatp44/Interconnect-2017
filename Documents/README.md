@@ -1060,8 +1060,8 @@ Now that you you have created a datasource with data with a generated API Key, y
 		> **Note:** the source is in your snippets folder
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-vsc-adapter-xml-sections-replaced.png?raw=true)
-	<div style="page-break-after: always;"></div>
 		
+		<div style="page-break-after: always;"></div>
 		
 		```
 		var CLIENT_ID = '<Your Value Here>'
