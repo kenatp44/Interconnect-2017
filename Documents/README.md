@@ -19,7 +19,11 @@ Learn how to use [IBM's API Connect](http://www-03.ibm.com/software/products/en/
 All the tools necessary are installed on the virtual machine for this sesssion. However if you would like to setup a similar environment on your machine, you will need the following:
 
 ### Open-Source Tools
-- **NodeJS**: available from [http://nodejs.org](http://nodejs.org). This will also install the node package manager (npm) used to install Ionic, Mobile Foundation Command Line Interface and API Connect Command Line Interface. Use version 6.x or higher, although 6.x is recommended.- **Ionic 2 / Angular 2**: install with `sudo npm install -g ionic`- Apple **Xcode**: and the iOS SDK - available for MacOS only. Not installed on the Virtual Machine for this lab. Not used in this lab.- **Android Studio**: and the Android SDK tools: https://developer.android.com/studio/index.html. Not used in this lab.- Any code editing tool of your choice, such as: 
+- **NodeJS**: available from [http://nodejs.org](http://nodejs.org). This will also install the node package manager (npm) used to install Ionic, Mobile Foundation Command Line Interface and API Connect Command Line Interface. Use version 6.x or higher, although 6.x is recommended.
+- **Ionic 2 / Angular 2**: install with `sudo npm install -g ionic`
+- Apple **Xcode**: and the iOS SDK - available for MacOS only. Not installed on the Virtual Machine for this lab. Not used in this lab.
+- **Android Studio**: and the Android SDK tools: https://developer.android.com/studio/index.html. Not used in this lab.
+- Any code editing tool of your choice, such as: 
 	- Visual Studio Code [https://code.visualstudio.com/](https://code.visualstudio.com/)
 	- Brackets [http://brackets.io/](https://atom.io/)
 	- Atom [https://atom.io/](https://atom.io/)
@@ -29,7 +33,9 @@ All the tools necessary are installed on the virtual machine for this sesssion. 
 - **Maven**: available from [https://maven.apache.org/](https://maven.apache.org/) `sudo apt-get install maven`
 
 ### IBM Tools
-- These labs require a **Bluemix Public account**, available at https://www.bluemix.net- **API Connect CLI**: install with `npm install -g apiconnect`. Note used in this lab.- **Mobile Foundation Command Line Interface**: install with `npm install -g mfpdev-cli`
+- These labs require a **Bluemix Public account**, available at https://www.bluemix.net
+- **API Connect CLI**: install with `npm install -g apiconnect`. Note used in this lab.
+- **Mobile Foundation Command Line Interface**: install with `npm install -g mfpdev-cli`
 - Optionally you can install the **Mobile Foundation Developer Kit** which includes a version of the server that you can run locally. To install the Mobile Foundation Developer Kit visit [https://mobilefirstplatform.ibmcloud.com/downloads/](https://mobilefirstplatform.ibmcloud.com/downloads/)	
 
 ## Lab Sections
@@ -38,7 +44,8 @@ There are four labs that you will complete, they are:
 1. **Instantiate Bluemix Environment**: You will use a Bluemix environment to create the necessary cloud components used in future labs.
 
 1. **Cloudant NoSQL data services**: You will instantiate a Cloudant database service in Bluemix, and use the commandline tool to load basic employee data. You will create several Cloudant views, and explore how to test those using the Cloudant admin console.
-2. **API Connect**: API Connect is IBM's platform for the creation, execution, management, and security of scalable microservices and APIs. In this section, you will connect to the Cloudant database instance created in lab #1, and we'll create a fully managed REST-based API that exposes both GET and PUT endpoints from the Cloudant REST API.
+
+2. **API Connect**: API Connect is IBM's platform for the creation, execution, management, and security of scalable microservices and APIs. In this section, you will connect to the Cloudant database instance created in lab #1, and we'll create a fully managed REST-based API that exposes both GET and PUT endpoints from the Cloudant REST API.
 
 3. **Mobile Foundation** (aka MobileFirst Foundation): In this lab, you will develop both the server-side and the client-side of an Ionic 2/Angular 2 hybrid mobile application, deployed to both iOS and Android devices using Apache Cordova. You will also develop a Javascript Adapter that connects to the API exposed from API Connect, and then consume that adapter from the Ionic/Angular application code.
 
@@ -269,27 +276,34 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 	- **Click** the **Mobile** link in the Apps menu on the left hand side of the page.
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-menu-link.png?raw=true)
-<div style="page-break-after: always;"></div>		
+		
+	<div style="page-break-after: always;"></div>		
+
 	- **Click** the **Mobile Foundation** link from the results
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-foundation-link.png?raw=true)
-<div style="page-break-after: always;"></div>		
+		
+	<div style="page-break-after: always;"></div>		
+
 	- Change the **Service name** to Interconnect2017-mobile
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-service-name.png?raw=true)
-<div style="page-break-after: always;"></div>		
+		
+	<div style="page-break-after: always;"></div>		
 	- **Scroll** to the Pricing Plans and ensure that the **Developer** plan is selected, then **Click** the **Create** button
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-pricing.png?raw=true)
-<div style="page-break-after: always;"></div>		
+		
+	<div style="page-break-after: always;"></div>		
+
 	- When setting up the Mobile Foundation server instance you have full control over the settings such as size of the server, adminstrator password, as well as Server Configuration options. You will want to set the admin username and password. To do that, **Click** the **Settings** button.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-settings-link.png?raw=true)
-<div style="page-break-after: always;"></div>		
+	<div style="page-break-after: always;"></div>		
 	- Leave the Topology Size as Small (S). **Click** the **Security** tab.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-settings-topology.png?raw=true)
-<div style="page-break-after: always;"></div>		
+	<div style="page-break-after: always;"></div>		
 	- On the **Security** tab you can set the admin password. Set the password by entering *admin* in the **Console Login Password** field and then confirm the password by typing *admin* again tin the **Confirm Password** field. You can also set LTPA Keys if you have them on the screen, however for this lab you will not do that. **Scroll** to the bottom of the page and **Click** the **Next** button.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-settings-security.png?raw=true)
@@ -297,11 +311,11 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 	- On the **Server Configuration** tab you can set up JNDI entries and configure the User Registry. You will not need this for this lab. **Scroll** to the bottom of the page and **Click** the **Start Advanced Server** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-settings-server-configuration.png?raw=true)
-<div style="page-break-after: always;"></div>		
+	<div style="page-break-after: always;"></div>		
 	- This will start the server provisioning process. This can take up to 10 minutes.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-starting-server.png?raw=true)
-<div style="page-break-after: always;"></div>	
+	<div style="page-break-after: always;"></div>	
 	- When the server is provisioned, you will see the following screen.  Here you can 1) Launch the server console, 2) View the administrator password and 3) Add the analytics server (which will not be convered in this session).
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-complete.png?raw=true)
