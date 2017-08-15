@@ -289,37 +289,48 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-service-name.png?raw=true)
 		
-	<div style="page-break-after: always;"></div>		
+		<div style="page-break-after: always;"></div>		
+	
 	- **Scroll** to the Pricing Plans and ensure that the **Developer** plan is selected, then **Click** the **Create** button
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-pricing.png?raw=true)
 		
-	<div style="page-break-after: always;"></div>		
+		<div style="page-break-after: always;"></div>		
 
 	- When setting up the Mobile Foundation server instance you have full control over the settings such as size of the server, adminstrator password, as well as Server Configuration options. You will want to set the admin username and password. To do that, **Click** the **Settings** button.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-settings-link.png?raw=true)
-	<div style="page-break-after: always;"></div>		
+		
+		<div style="page-break-after: always;"></div>		
+	
 	- Leave the Topology Size as Small (S). **Click** the **Security** tab.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-settings-topology.png?raw=true)
-	<div style="page-break-after: always;"></div>		
+		
+		<div style="page-break-after: always;"></div>		
+	
 	- On the **Security** tab you can set the admin password. Set the password by entering *admin* in the **Console Login Password** field and then confirm the password by typing *admin* again tin the **Confirm Password** field. You can also set LTPA Keys if you have them on the screen, however for this lab you will not do that. **Scroll** to the bottom of the page and **Click** the **Next** button.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-settings-security.png?raw=true)
-	<div style="page-break-after: always;"></div>		
+		
+		<div style="page-break-after: always;"></div>		
+		
 	- On the **Server Configuration** tab you can set up JNDI entries and configure the User Registry. You will not need this for this lab. **Scroll** to the bottom of the page and **Click** the **Start Advanced Server** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-settings-server-configuration.png?raw=true)
-	<div style="page-break-after: always;"></div>		
+		
+		<div style="page-break-after: always;"></div>		
 	- This will start the server provisioning process. This can take up to 10 minutes.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-starting-server.png?raw=true)
-	<div style="page-break-after: always;"></div>	
+		
+		<div style="page-break-after: always;"></div>	
+		
 	- When the server is provisioned, you will see the following screen.  Here you can 1) Launch the server console, 2) View the administrator password and 3) Add the analytics server (which will not be convered in this session).
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-complete.png?raw=true)
-	<div style="page-break-after: always;"></div>
+		
+		<div style="page-break-after: always;"></div>
 
 1. **Conclusion**: Lab Complete
 
