@@ -1046,7 +1046,8 @@ Now that you you have created a datasource with data with a generated API Key, y
 	<procedure name="updateEmployee" secured="false"/>```
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mf-vsc-adapter-xml-sections-replaced.png?raw=true)
-	<div style="page-break-after: always;"></div>
+
+		<div style="page-break-after: always;"></div>
 		
 	- **Open** the **employeeAdapter-impl.js** file
 
