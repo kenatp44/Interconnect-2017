@@ -174,17 +174,17 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 	- When the service is created you should see a screen similar to the following. You can click the LAUNCH button if you like. However you will be coming back to this in a future lab
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-setup-complete.png?raw=true)
-	<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 1. **Create API Connect Service**
 	- **Click** the **Catalog** link in the upper right section of the Bluemix Home page.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-click-catalog.png?raw=true)
-<div style="page-break-after: always;"></div>		
+		<div style="page-break-after: always;"></div>		
 	- **Click** the **APIs** link in the Services menu on the left hand side of the page
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-apis-menu-link.png?raw=true)
-	<div style="page-break-after: always;"></div>
+		<div style="page-break-after: always;"></div>
 
 	- **Click** the **API Connect** link from the results
 	
@@ -307,7 +307,7 @@ In this lab you will be given a Bluemix ID to use. This ID will be destroyed aft
 	- On the **Security** tab you can set the admin password. Set the password by entering *admin* in the **Console Login Password** field and then confirm the password by typing *admin* again tin the **Confirm Password** field. You can also set LTPA Keys if you have them on the screen, however for this lab you will not do that. **Scroll** to the bottom of the page and **Click** the **Next** button.
 	
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-settings-security.png?raw=true)
-<div style="page-break-after: always;"></div>		
+	<div style="page-break-after: always;"></div>		
 	- On the **Server Configuration** tab you can set up JNDI entries and configure the User Registry. You will not need this for this lab. **Scroll** to the bottom of the page and **Click** the **Start Advanced Server** button
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-mobile-setup-settings-server-configuration.png?raw=true)
@@ -354,11 +354,11 @@ In this lab you will create a database in Cloudant that will be used to store em
 	- With the Cloudant service open, **Click** the **Manage** tab and then **Click** the **LAUNCH** button to open the Cloudant management console in a new tab in the browser.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-service.png?raw=true)
-<div style="page-break-after: always;"></div>		
+	<div style="page-break-after: always;"></div>		
 	- Once the Cloudant management console opens, **Click** the **Database** menu option to show the list of databases.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-database-menu.png?raw=true)
-<div style="page-break-after: always;"></div>		
+	<div style="page-break-after: always;"></div>		
 	- To create a new database, **Click** the **Create Database** button on the Databases page.
 
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-create-database-button.png?raw=true)
