@@ -5,11 +5,11 @@ Interconnect 2017 Session ID: 2378A
 git location: [https://github.com/kenatibm/Interconnect-2017](https://github.com/kenatibm/Interconnect-2017)
 
 ## Speakers
-| Ken Nelson | Chelsie Peterson | Paul Horan |
-| :---- | :---- | :---- |
-| *Integration Architect - Industrial SWAT*:  Cloud  -  Mobile  -  API | Hybrid Cloud Integration - Technical Sales Specialist IBM Hybrid Cloud  | Hybrid Cloud Integration Technical Sales Specialist IBM Hybrid Cloud |
-| ken.nelson@us.ibm.com | cpeterson@us.ibm.com | pahoran@us.ibm.com |
-| [linkedIn](https://www.linkedin.com/in/kendnelson/)  -  [Twitter](https://twitter.com/kenatibm) | [linkedIn](https://www.linkedin.com/in/cpete/)  -  [Twitter](https://twitter.com/ChelsieMarieP) | [linkedIn](https://www.linkedin.com/in/pahoran/)  -  [Twitter](https://twitter.com/NoazDad) |
+| Ken Nelson | Paul Horan |
+| :---- | :---- |
+| *Integration Architect - Industrial SWAT*:  Cloud  -  Mobile  -  API | Hybrid Cloud Integration Technical Sales Specialist IBM Hybrid Cloud |
+| ken.nelson@us.ibm.com | pahoran@us.ibm.com |
+| [linkedIn](https://www.linkedin.com/in/kendnelson/)  -  [Twitter](https://twitter.com/kenatibm) |  [linkedIn](https://www.linkedin.com/in/pahoran/)  -  [Twitter](https://twitter.com/NoazDad) |
 
 
 ## Session Information
