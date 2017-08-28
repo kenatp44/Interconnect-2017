@@ -4,6 +4,8 @@ Interconnect 2017 Session ID: 2378A
 
 git location: [https://github.com/kenatibm/Interconnect-2017](https://github.com/kenatibm/Interconnect-2017)
 
+> **NOTE:** Please pull the above location as you will need the snippets directory later in this lab. To pull the git repository ensure that git is installed (information installing git can be found below) then open a terminal or command prompt and type `git clone https://github.com/kenatibm/Interconnect-2017`.
+
 ## Speakers
 | Ken Nelson | Paul Horan |
 | :---- | :---- |
