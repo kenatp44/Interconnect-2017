@@ -511,7 +511,7 @@ In this lab you will create a database in Cloudant that will be used to store em
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-name-view-employeeFavorites.png?raw=true)
 	<div style="page-break-after: always;"></div>
 
-	- Copy the snippit in `employeeList-view.json` under `Interconnect 2017/Snippets/Cloudant` directory then past over the existing map function or type the following:
+	- Copy the snippit in `employeeFavorites-view.json` under `Interconnect 2017/Snippets/Cloudant` directory then past over the existing map function or type the following:
 
 			function(emp) {
 				if (emp.first_name && emp.last_name && emp.job_title && emp.email) {
