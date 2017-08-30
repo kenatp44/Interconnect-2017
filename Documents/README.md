@@ -516,16 +516,16 @@ In this lab you will create a database in Cloudant that will be used to store em
 	- Copy the snippit in `employeeFavorites-view.json` under `Interconnect 2017/Snippets/Cloudant` directory then past over the existing map function or type the following:
 
 			function(emp) {
-				if (emp.first_name && emp.last_name && emp.job_title && emp.email) {
-					emit(emp._rev, {
-						first_name: emp.first_name,
-						last_name: emp.last_name,
-						title: emp.job_title,
-						email: emp.email,
-						img: emp.img,
-						favorite: emp.favorite
-					});
-				}
+			    if (emp.favorite == "yes") {
+				emit(emp._rev, {
+				    first_name: emp.first_name,
+				    last_name: emp.last_name,
+				    job_title: emp.job_title,
+				    email: emp.email,
+				    img: emp.img,
+				    favorite: emp.favorite
+				});
+			    }
 			}
 		
 		![](https://github.com/kenatibm/Interconnect-2017/blob/master/Documents/images/bluemix-cloudant-design-documents-name-view-employeeFavorites-map.png?raw=true)
