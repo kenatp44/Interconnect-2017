@@ -687,7 +687,7 @@ Now that you you have created a datasource with data with a generated API Key, y
 		
 		|  Path  |  Operation ID  |  GET Parameter  |  Type |
 		|  :---  |  :---  |  :---  |  :---  |
-		|  /employees/favorites  | employee.getFavorites | n/a | n/a |
+		|  /favorites  | employee.getFavorites | n/a | n/a |
 		|  /employees/{id}  | employee.findByID | id  (located in Path)|  string  |
 		
 		- **Path 2** - /employees/favorites
