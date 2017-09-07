@@ -1100,7 +1100,7 @@ Now that you you have created a datasource with data with a generated API Key, y
 		}
 		
 		function getEmployeeDetail(_id) {
-		    INPUT.path = this.BASE_URL + '/' + _id
+		    INPUT.path = this.BASE_URL + '/employees/' + _id
 		    return MFP.Server.invokeHttp(INPUT)
 		}
 		
