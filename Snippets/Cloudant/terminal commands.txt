@@ -1,3 +1,6 @@
 DB=[PASTE THE CONTENTS OF THE CLIPBOARD]
 
 curl -H "Content-Type:application/json" -d @employeeData.json -X POST "$DB/employees/_bulk_docs"
+
+
+http://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/api/client-side-api/
